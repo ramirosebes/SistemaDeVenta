@@ -30,16 +30,16 @@
         {
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.menuUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMantenedor = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProveedores = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.contenedor = new System.Windows.Forms.Panel();
             this.labelTitulo = new System.Windows.Forms.Label();
-            this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuProveedores = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuMantenedor = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,77 @@
             this.menu.TabIndex = 3;
             this.menu.Text = "menuStrip1";
             // 
+            // menuUsuario
+            // 
+            this.menuUsuario.AutoSize = false;
+            this.menuUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.menuUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuUsuario.Name = "menuUsuario";
+            this.menuUsuario.Size = new System.Drawing.Size(100, 30);
+            this.menuUsuario.Text = "Usuarios";
+            this.menuUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuMantenedor
+            // 
+            this.menuMantenedor.AutoSize = false;
+            this.menuMantenedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuMantenedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuMantenedor.Name = "menuMantenedor";
+            this.menuMantenedor.Size = new System.Drawing.Size(100, 30);
+            this.menuMantenedor.Text = "Mantenedor";
+            this.menuMantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuVentas
+            // 
+            this.menuVentas.AutoSize = false;
+            this.menuVentas.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuVentas.Name = "menuVentas";
+            this.menuVentas.Size = new System.Drawing.Size(100, 30);
+            this.menuVentas.Text = "Ventas";
+            this.menuVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuCompras
+            // 
+            this.menuCompras.AutoSize = false;
+            this.menuCompras.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuCompras.Name = "menuCompras";
+            this.menuCompras.Size = new System.Drawing.Size(100, 30);
+            this.menuCompras.Text = "Compras";
+            this.menuCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuClientes
+            // 
+            this.menuClientes.AutoSize = false;
+            this.menuClientes.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuClientes.Name = "menuClientes";
+            this.menuClientes.Size = new System.Drawing.Size(100, 30);
+            this.menuClientes.Text = "Clientes";
+            this.menuClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuProveedores
+            // 
+            this.menuProveedores.AutoSize = false;
+            this.menuProveedores.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuProveedores.Name = "menuProveedores";
+            this.menuProveedores.Size = new System.Drawing.Size(100, 30);
+            this.menuProveedores.Text = "Proveedores";
+            this.menuProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuReportes
+            // 
+            this.menuReportes.AutoSize = false;
+            this.menuReportes.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuReportes.Name = "menuReportes";
+            this.menuReportes.Size = new System.Drawing.Size(100, 30);
+            this.menuReportes.Text = "Reportes";
+            this.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // menuAcercaDe
             // 
             this.menuAcercaDe.AutoSize = false;
@@ -102,77 +173,6 @@
             this.labelTitulo.TabIndex = 5;
             this.labelTitulo.Text = "Sistema de Ventas";
             // 
-            // menuClientes
-            // 
-            this.menuClientes.AutoSize = false;
-            this.menuClientes.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(100, 30);
-            this.menuClientes.Text = "Clientes";
-            this.menuClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menuReportes
-            // 
-            this.menuReportes.AutoSize = false;
-            this.menuReportes.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuReportes.Name = "menuReportes";
-            this.menuReportes.Size = new System.Drawing.Size(100, 30);
-            this.menuReportes.Text = "Reportes";
-            this.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menuProveedores
-            // 
-            this.menuProveedores.AutoSize = false;
-            this.menuProveedores.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuProveedores.Name = "menuProveedores";
-            this.menuProveedores.Size = new System.Drawing.Size(100, 30);
-            this.menuProveedores.Text = "Proveedores";
-            this.menuProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menuCompras
-            // 
-            this.menuCompras.AutoSize = false;
-            this.menuCompras.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuCompras.Name = "menuCompras";
-            this.menuCompras.Size = new System.Drawing.Size(100, 30);
-            this.menuCompras.Text = "Compras";
-            this.menuCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menuVentas
-            // 
-            this.menuVentas.AutoSize = false;
-            this.menuVentas.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuVentas.Name = "menuVentas";
-            this.menuVentas.Size = new System.Drawing.Size(100, 30);
-            this.menuVentas.Text = "Ventas";
-            this.menuVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menuMantenedor
-            // 
-            this.menuMantenedor.AutoSize = false;
-            this.menuMantenedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuMantenedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuMantenedor.Name = "menuMantenedor";
-            this.menuMantenedor.Size = new System.Drawing.Size(100, 30);
-            this.menuMantenedor.Text = "Mantenedor";
-            this.menuMantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menuUsuario
-            // 
-            this.menuUsuario.AutoSize = false;
-            this.menuUsuario.BackColor = System.Drawing.SystemColors.Window;
-            this.menuUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuUsuario.Name = "menuUsuario";
-            this.menuUsuario.Size = new System.Drawing.Size(100, 30);
-            this.menuUsuario.Text = "Usuarios";
-            this.menuUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +183,7 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

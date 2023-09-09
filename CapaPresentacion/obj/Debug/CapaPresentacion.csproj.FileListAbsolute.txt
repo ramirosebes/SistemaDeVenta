@@ -1,0 +1,11 @@
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

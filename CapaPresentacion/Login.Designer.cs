@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.buttonSalir = new System.Windows.Forms.Button();
-            this.buttonAcceder = new System.Windows.Forms.Button();
+            this.buttonIngresar = new System.Windows.Forms.Button();
             this.labelTerminosYCondiciones = new System.Windows.Forms.Label();
             this.labelRecuperarContrasena = new System.Windows.Forms.Label();
             this.labelContrasena = new System.Windows.Forms.Label();
             this.textBoxContrasena = new System.Windows.Forms.TextBox();
             this.labelLineContrasena = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.labelLineEmail = new System.Windows.Forms.Label();
+            this.labelDocumento = new System.Windows.Forms.Label();
+            this.textBoxDocumento = new System.Windows.Forms.TextBox();
+            this.labelLineDocumento = new System.Windows.Forms.Label();
             this.labelTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSalir
@@ -55,20 +55,22 @@
             this.buttonSalir.TabIndex = 23;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.UseVisualStyleBackColor = false;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
-            // buttonAcceder
+            // buttonIngresar
             // 
-            this.buttonAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.buttonAcceder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAcceder.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAcceder.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonAcceder.Location = new System.Drawing.Point(74, 310);
-            this.buttonAcceder.Name = "buttonAcceder";
-            this.buttonAcceder.Size = new System.Drawing.Size(150, 35);
-            this.buttonAcceder.TabIndex = 22;
-            this.buttonAcceder.Text = "Acceder";
-            this.buttonAcceder.UseVisualStyleBackColor = false;
+            this.buttonIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.buttonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIngresar.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIngresar.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonIngresar.Location = new System.Drawing.Point(74, 310);
+            this.buttonIngresar.Name = "buttonIngresar";
+            this.buttonIngresar.Size = new System.Drawing.Size(150, 35);
+            this.buttonIngresar.TabIndex = 22;
+            this.buttonIngresar.Text = "Ingresar";
+            this.buttonIngresar.UseVisualStyleBackColor = false;
+            this.buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click);
             // 
             // labelTerminosYCondiciones
             // 
@@ -126,78 +128,80 @@
             this.labelLineContrasena.TabIndex = 17;
             this.labelLineContrasena.Text = "label2";
             // 
-            // labelEmail
+            // labelDocumento
             // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelEmail.Location = new System.Drawing.Point(20, 142);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(42, 19);
-            this.labelEmail.TabIndex = 16;
-            this.labelEmail.Text = "Email:";
+            this.labelDocumento.AutoSize = true;
+            this.labelDocumento.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelDocumento.Location = new System.Drawing.Point(20, 140);
+            this.labelDocumento.Name = "labelDocumento";
+            this.labelDocumento.Size = new System.Drawing.Size(71, 19);
+            this.labelDocumento.TabIndex = 16;
+            this.labelDocumento.Text = "Documento:";
             // 
-            // textBoxEmail
+            // textBoxDocumento
             // 
-            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxEmail.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxEmail.Location = new System.Drawing.Point(24, 168);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(250, 20);
-            this.textBoxEmail.TabIndex = 15;
+            this.textBoxDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDocumento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxDocumento.Location = new System.Drawing.Point(24, 168);
+            this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.Size = new System.Drawing.Size(250, 20);
+            this.textBoxDocumento.TabIndex = 15;
             // 
-            // labelSubTitulo
+            // labelLineDocumento
             // 
-            this.labelSubTitulo.AutoSize = true;
-            this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelSubTitulo.Location = new System.Drawing.Point(20, 99);
-            this.labelSubTitulo.Name = "labelSubTitulo";
-            this.labelSubTitulo.Size = new System.Drawing.Size(60, 29);
-            this.labelSubTitulo.TabIndex = 14;
-            this.labelSubTitulo.Text = "LOGIN";
-            // 
-            // labelLineEmail
-            // 
-            this.labelLineEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.labelLineEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.labelLineEmail.Location = new System.Drawing.Point(24, 191);
-            this.labelLineEmail.Name = "labelLineEmail";
-            this.labelLineEmail.Size = new System.Drawing.Size(250, 1);
-            this.labelLineEmail.TabIndex = 13;
-            this.labelLineEmail.Text = "label2";
+            this.labelLineDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.labelLineDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.labelLineDocumento.Location = new System.Drawing.Point(24, 191);
+            this.labelLineDocumento.Name = "labelLineDocumento";
+            this.labelLineDocumento.Size = new System.Drawing.Size(250, 1);
+            this.labelLineDocumento.TabIndex = 13;
+            this.labelLineDocumento.Text = "label2";
             // 
             // labelTitulo
             // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.labelTitulo.Location = new System.Drawing.Point(65, 19);
+            this.labelTitulo.Location = new System.Drawing.Point(36, 24);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(168, 58);
+            this.labelTitulo.Size = new System.Drawing.Size(228, 45);
             this.labelTitulo.TabIndex = 12;
-            this.labelTitulo.Text = "GymTime";
+            this.labelTitulo.Text = "Sistema de Venta";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label1.Location = new System.Drawing.Point(20, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 25);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "LOGIN";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 461);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSalir);
-            this.Controls.Add(this.buttonAcceder);
+            this.Controls.Add(this.buttonIngresar);
             this.Controls.Add(this.labelTerminosYCondiciones);
             this.Controls.Add(this.labelRecuperarContrasena);
             this.Controls.Add(this.labelContrasena);
             this.Controls.Add(this.textBoxContrasena);
             this.Controls.Add(this.labelLineContrasena);
-            this.Controls.Add(this.labelEmail);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.labelSubTitulo);
-            this.Controls.Add(this.labelLineEmail);
+            this.Controls.Add(this.labelDocumento);
+            this.Controls.Add(this.textBoxDocumento);
+            this.Controls.Add(this.labelLineDocumento);
             this.Controls.Add(this.labelTitulo);
+            this.MaximizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,16 +210,16 @@
         #endregion
 
         private System.Windows.Forms.Button buttonSalir;
-        private System.Windows.Forms.Button buttonAcceder;
+        private System.Windows.Forms.Button buttonIngresar;
         private System.Windows.Forms.Label labelTerminosYCondiciones;
         private System.Windows.Forms.Label labelRecuperarContrasena;
         private System.Windows.Forms.Label labelContrasena;
         private System.Windows.Forms.TextBox textBoxContrasena;
         private System.Windows.Forms.Label labelLineContrasena;
-        private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.Label labelSubTitulo;
-        private System.Windows.Forms.Label labelLineEmail;
+        private System.Windows.Forms.Label labelDocumento;
+        private System.Windows.Forms.TextBox textBoxDocumento;
+        private System.Windows.Forms.Label labelLineDocumento;
         private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label label1;
     }
 }
