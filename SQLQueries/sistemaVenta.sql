@@ -20,7 +20,7 @@ create table PROVEEDOR (
 	razonSocial nvarchar(50),
 	correo nvarchar(50),
 	telefono nvarchar(50),
-	estado bit not null default 0,
+	estado bit not null default 1,
 	fechaRegistro datetime default getdate(),
 );
 
@@ -30,7 +30,7 @@ create table CLIENTE (
 	nombreCompleto nvarchar(50),
 	correo nvarchar(50),
 	telefono nvarchar(50),
-	estado bit not null default 0,
+	estado bit not null default 1,
 	fechaRegistro datetime default getdate(),
 );
 
@@ -41,14 +41,14 @@ create table USUARIO (
 	correo nvarchar(50),
 	clave nvarchar(50),
 	idRol int references ROL(idRol),
-	estado bit not null default 0,
+	estado bit not null default 1,
 	fechaRegistro datetime default getdate(),
 );
 
 create table CATEGORIA (
 	idCategoria int primary key identity,
 	descripcion nvarchar(100),
-	estado bit not null default 0,
+	estado bit not null default 1,
 	fechaRegistro datetime default getdate(),
 );
 
@@ -61,7 +61,7 @@ create table PRODUCTO (
 	stock int not null default 0,
 	precioCompra decimal(10,2) default 0,
 	precioVenta decimal(10,2) default 0,
-	estado bit not null default 0,
+	estado bit not null default 1,
 	fechaRegistro datetime default getdate(),
 );
 

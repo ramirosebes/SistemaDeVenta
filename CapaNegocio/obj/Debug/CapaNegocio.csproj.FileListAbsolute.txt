@@ -1,0 +1,11 @@
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaEntidad.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaEntidad.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete

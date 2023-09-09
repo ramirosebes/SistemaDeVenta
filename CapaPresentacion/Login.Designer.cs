@@ -33,7 +33,7 @@
             this.labelTerminosYCondiciones = new System.Windows.Forms.Label();
             this.labelRecuperarContrasena = new System.Windows.Forms.Label();
             this.labelContrasena = new System.Windows.Forms.Label();
-            this.textBoxContrasena = new System.Windows.Forms.TextBox();
+            this.textBoxClave = new System.Windows.Forms.TextBox();
             this.labelLineContrasena = new System.Windows.Forms.Label();
             this.labelDocumento = new System.Windows.Forms.Label();
             this.textBoxDocumento = new System.Windows.Forms.TextBox();
@@ -107,16 +107,16 @@
             this.labelContrasena.TabIndex = 19;
             this.labelContrasena.Text = "Contraseña:";
             // 
-            // textBoxContrasena
+            // textBoxClave
             // 
-            this.textBoxContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxContrasena.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxContrasena.Location = new System.Drawing.Point(24, 240);
-            this.textBoxContrasena.Name = "textBoxContrasena";
-            this.textBoxContrasena.PasswordChar = '*';
-            this.textBoxContrasena.Size = new System.Drawing.Size(250, 20);
-            this.textBoxContrasena.TabIndex = 18;
+            this.textBoxClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxClave.Location = new System.Drawing.Point(24, 240);
+            this.textBoxClave.Name = "textBoxClave";
+            this.textBoxClave.PasswordChar = '*';
+            this.textBoxClave.Size = new System.Drawing.Size(250, 20);
+            this.textBoxClave.TabIndex = 18;
             // 
             // labelLineContrasena
             // 
@@ -184,6 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(284, 461);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSalir);
@@ -191,7 +192,7 @@
             this.Controls.Add(this.labelTerminosYCondiciones);
             this.Controls.Add(this.labelRecuperarContrasena);
             this.Controls.Add(this.labelContrasena);
-            this.Controls.Add(this.textBoxContrasena);
+            this.Controls.Add(this.textBoxClave);
             this.Controls.Add(this.labelLineContrasena);
             this.Controls.Add(this.labelDocumento);
             this.Controls.Add(this.textBoxDocumento);
@@ -214,7 +215,7 @@
         private System.Windows.Forms.Label labelTerminosYCondiciones;
         private System.Windows.Forms.Label labelRecuperarContrasena;
         private System.Windows.Forms.Label labelContrasena;
-        private System.Windows.Forms.TextBox textBoxContrasena;
+        private System.Windows.Forms.TextBox textBoxClave;
         private System.Windows.Forms.Label labelLineContrasena;
         private System.Windows.Forms.Label labelDocumento;
         private System.Windows.Forms.TextBox textBoxDocumento;
