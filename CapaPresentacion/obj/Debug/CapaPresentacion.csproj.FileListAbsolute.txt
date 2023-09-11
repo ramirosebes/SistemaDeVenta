@@ -28,3 +28,11 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPrese
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\bin\Debug\CapaNegocio.pdb
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\bin\Debug\CapaDatos.pdb
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmCategoria.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmClientes.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmCompras.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmProducto.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedores.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmReportes.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuarios.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmVentas.resources

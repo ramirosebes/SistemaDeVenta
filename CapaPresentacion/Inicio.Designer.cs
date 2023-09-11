@@ -30,8 +30,10 @@
         {
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.menuUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMantenedor = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCategoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +42,8 @@
             this.menuAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.contenedor = new System.Windows.Forms.Panel();
             this.labelTitulo = new System.Windows.Forms.Label();
+            this.labelUsuarioTitulo = new System.Windows.Forms.Label();
+            this.labelUsuario = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +54,7 @@
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(815, 60);
+            this.menuTitulo.Size = new System.Drawing.Size(831, 60);
             this.menuTitulo.TabIndex = 2;
             this.menuTitulo.Text = "menuStrip2";
             // 
@@ -58,7 +62,7 @@
             // 
             this.menu.BackColor = System.Drawing.SystemColors.Window;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuUsuario,
+            this.menuUsuarios,
             this.menuMantenedor,
             this.menuVentas,
             this.menuCompras,
@@ -68,30 +72,48 @@
             this.menuAcercaDe});
             this.menu.Location = new System.Drawing.Point(0, 60);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(815, 34);
+            this.menu.Size = new System.Drawing.Size(831, 34);
             this.menu.TabIndex = 3;
             this.menu.Text = "menuStrip1";
             // 
-            // menuUsuario
+            // menuUsuarios
             // 
-            this.menuUsuario.AutoSize = false;
-            this.menuUsuario.BackColor = System.Drawing.SystemColors.Window;
-            this.menuUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.menuUsuario.Name = "menuUsuario";
-            this.menuUsuario.Size = new System.Drawing.Size(100, 30);
-            this.menuUsuario.Text = "Usuarios";
-            this.menuUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuUsuarios.AutoSize = false;
+            this.menuUsuarios.BackColor = System.Drawing.SystemColors.Window;
+            this.menuUsuarios.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.menuUsuarios.Name = "menuUsuarios";
+            this.menuUsuarios.Size = new System.Drawing.Size(100, 30);
+            this.menuUsuarios.Text = "Usuarios";
+            this.menuUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuUsuarios.Click += new System.EventHandler(this.menuUsuario_Click);
             // 
             // menuMantenedor
             // 
             this.menuMantenedor.AutoSize = false;
+            this.menuMantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuCategoria,
+            this.menuProducto});
             this.menuMantenedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMantenedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.menuMantenedor.Name = "menuMantenedor";
-            this.menuMantenedor.Size = new System.Drawing.Size(100, 30);
+            this.menuMantenedor.Size = new System.Drawing.Size(122, 30);
             this.menuMantenedor.Text = "Mantenedor";
             this.menuMantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuCategoria
+            // 
+            this.menuCategoria.Name = "menuCategoria";
+            this.menuCategoria.Size = new System.Drawing.Size(180, 28);
+            this.menuCategoria.Text = "Categoria";
+            this.menuCategoria.Click += new System.EventHandler(this.menuCategoria_Click);
+            // 
+            // menuProducto
+            // 
+            this.menuProducto.Name = "menuProducto";
+            this.menuProducto.Size = new System.Drawing.Size(180, 28);
+            this.menuProducto.Text = "Producto";
+            this.menuProducto.Click += new System.EventHandler(this.menuProducto_Click);
             // 
             // menuVentas
             // 
@@ -159,7 +181,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 94);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(815, 356);
+            this.contenedor.Size = new System.Drawing.Size(831, 412);
             this.contenedor.TabIndex = 4;
             // 
             // labelTitulo
@@ -173,18 +195,45 @@
             this.labelTitulo.TabIndex = 5;
             this.labelTitulo.Text = "Sistema de Ventas";
             // 
+            // labelUsuarioTitulo
+            // 
+            this.labelUsuarioTitulo.AutoSize = true;
+            this.labelUsuarioTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.labelUsuarioTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuarioTitulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelUsuarioTitulo.Location = new System.Drawing.Point(702, 26);
+            this.labelUsuarioTitulo.Name = "labelUsuarioTitulo";
+            this.labelUsuarioTitulo.Size = new System.Drawing.Size(53, 19);
+            this.labelUsuarioTitulo.TabIndex = 6;
+            this.labelUsuarioTitulo.Text = "Usuario:";
+            // 
+            // labelUsuario
+            // 
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.labelUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelUsuario.Location = new System.Drawing.Point(750, 26);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(77, 19);
+            this.labelUsuario.TabIndex = 7;
+            this.labelUsuario.Text = "labelUsuario";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 450);
+            this.ClientSize = new System.Drawing.Size(831, 506);
+            this.Controls.Add(this.labelUsuario);
+            this.Controls.Add(this.labelUsuarioTitulo);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.ResumeLayout(false);
@@ -199,13 +248,17 @@
         private System.Windows.Forms.ToolStripMenuItem menuAcercaDe;
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.ToolStripMenuItem menuUsuario;
+        private System.Windows.Forms.ToolStripMenuItem menuUsuarios;
         private System.Windows.Forms.ToolStripMenuItem menuMantenedor;
         private System.Windows.Forms.ToolStripMenuItem menuVentas;
         private System.Windows.Forms.ToolStripMenuItem menuCompras;
         private System.Windows.Forms.ToolStripMenuItem menuProveedores;
         private System.Windows.Forms.ToolStripMenuItem menuReportes;
         private System.Windows.Forms.ToolStripMenuItem menuClientes;
+        private System.Windows.Forms.Label labelUsuarioTitulo;
+        private System.Windows.Forms.Label labelUsuario;
+        private System.Windows.Forms.ToolStripMenuItem menuCategoria;
+        private System.Windows.Forms.ToolStripMenuItem menuProducto;
     }
 }
 
