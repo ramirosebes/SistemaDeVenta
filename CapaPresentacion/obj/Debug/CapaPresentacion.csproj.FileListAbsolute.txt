@@ -36,3 +36,5 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPrese
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmReportes.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuarios.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmVentas.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmDetalleCompra.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaPresentacion\obj\Debug\CapaPresentacion.frmDetalleVenta.resources

@@ -29,7 +29,7 @@ namespace CapaDatos
                     {
                         while (dr.Read())
                         {
-                            lista.Add(new Usuario
+                            lista.Add(new Usuario()
                             {
                                 idUsuario = Convert.ToInt32(dr["idUsuario"]),
                                 documento = dr["documento"].ToString(),

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CapaEntidad;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -26,6 +27,21 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            List<Permiso> listaPermisos = new CNPermiso().Listar(usuarioActual.idUsuario);
+
+            foreach (ToolStripMenuItem menu in menu.Items)
+            {
+                //"m" es cada elemento que tiene la lista que trea de SQL.
+                //m.nombreMenu trae los nombres de la base de datos y en menu.Name estan los nombres que yo coloco en el form Inicio como nombre de los MenuItem en la propiedad (name)
+                //Y compara que sean iguales
+                bool encontrado = listaPermisos.Any(m => m.nombreMenu == menu.Name);
+
+                if (encontrado == false)
+                {
+                    menu.Visible = false;
+                }
+            }
+
             labelUsuario.Text = usuarioActual.nombreCompleto;
         }
 
@@ -55,16 +71,52 @@ namespace CapaPresentacion
         private void menuUsuario_Click(object sender, EventArgs e)
         {
             abrirFormulario((ToolStripMenuItem) sender ,new frmUsuarios());
+            //abrirFormulario(menuUsuarios, new frmCategoria()); //Es lo mismo que arriba pero de otra forma
         }
 
-        private void menuCategoria_Click(object sender, EventArgs e)
+        private void subMenuCategoria_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuMantenedor, new frmCategoria());
         }
 
-        private void menuProducto_Click(object sender, EventArgs e)
+        private void subMenuProducto_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuMantenedor, new frmProducto());
+        }
+
+        private void subMenuRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuVentas, new frmVentas());
+        }
+
+        private void subMenuVerDetalleVenta_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuVentas, new frmDetalleVenta());
+        }
+
+        private void subMenuRegistrarCompra_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuCompras, new frmCompras());
+        }
+
+        private void subMenuVerDetalleCompra_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuCompras, new frmDetalleCompra());
+        }
+
+        private void menuClientes_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((ToolStripMenuItem)sender, new frmClientes());
+        }
+
+        private void menuProveedores_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((ToolStripMenuItem)sender, new frmProveedores());
+        }
+
+        private void menuReportes_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((ToolStripMenuItem)sender, new frmReportes());
         }
     }
 }

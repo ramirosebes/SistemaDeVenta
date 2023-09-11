@@ -32,8 +32,8 @@
             this.menu = new System.Windows.Forms.MenuStrip();
             this.menuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMantenedor = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCategoria = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuCategoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +44,10 @@
             this.labelTitulo = new System.Windows.Forms.Label();
             this.labelUsuarioTitulo = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
+            this.subMenuRegistrarVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuVerDetalleVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuRegistrarCompra = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuVerDetalleCompra = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +58,7 @@
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(831, 60);
+            this.menuTitulo.Size = new System.Drawing.Size(1040, 60);
             this.menuTitulo.TabIndex = 2;
             this.menuTitulo.Text = "menuStrip2";
             // 
@@ -72,7 +76,7 @@
             this.menuAcercaDe});
             this.menu.Location = new System.Drawing.Point(0, 60);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(831, 34);
+            this.menu.Size = new System.Drawing.Size(1040, 34);
             this.menu.TabIndex = 3;
             this.menu.Text = "menuStrip1";
             // 
@@ -92,8 +96,8 @@
             // 
             this.menuMantenedor.AutoSize = false;
             this.menuMantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCategoria,
-            this.menuProducto});
+            this.subMenuCategoria,
+            this.subMenuProducto});
             this.menuMantenedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMantenedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.menuMantenedor.Name = "menuMantenedor";
@@ -101,23 +105,28 @@
             this.menuMantenedor.Text = "Mantenedor";
             this.menuMantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // menuCategoria
+            // subMenuCategoria
             // 
-            this.menuCategoria.Name = "menuCategoria";
-            this.menuCategoria.Size = new System.Drawing.Size(180, 28);
-            this.menuCategoria.Text = "Categoria";
-            this.menuCategoria.Click += new System.EventHandler(this.menuCategoria_Click);
+            this.subMenuCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.subMenuCategoria.Name = "subMenuCategoria";
+            this.subMenuCategoria.Size = new System.Drawing.Size(180, 28);
+            this.subMenuCategoria.Text = "Categoria";
+            this.subMenuCategoria.Click += new System.EventHandler(this.subMenuCategoria_Click);
             // 
-            // menuProducto
+            // subMenuProducto
             // 
-            this.menuProducto.Name = "menuProducto";
-            this.menuProducto.Size = new System.Drawing.Size(180, 28);
-            this.menuProducto.Text = "Producto";
-            this.menuProducto.Click += new System.EventHandler(this.menuProducto_Click);
+            this.subMenuProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.subMenuProducto.Name = "subMenuProducto";
+            this.subMenuProducto.Size = new System.Drawing.Size(180, 28);
+            this.subMenuProducto.Text = "Producto";
+            this.subMenuProducto.Click += new System.EventHandler(this.subMenuProducto_Click);
             // 
             // menuVentas
             // 
             this.menuVentas.AutoSize = false;
+            this.menuVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subMenuRegistrarVenta,
+            this.subMenuVerDetalleVenta});
             this.menuVentas.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.menuVentas.Name = "menuVentas";
@@ -128,6 +137,9 @@
             // menuCompras
             // 
             this.menuCompras.AutoSize = false;
+            this.menuCompras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subMenuRegistrarCompra,
+            this.subMenuVerDetalleCompra});
             this.menuCompras.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.menuCompras.Name = "menuCompras";
@@ -144,6 +156,7 @@
             this.menuClientes.Size = new System.Drawing.Size(100, 30);
             this.menuClientes.Text = "Clientes";
             this.menuClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
             // 
             // menuProveedores
             // 
@@ -154,6 +167,7 @@
             this.menuProveedores.Size = new System.Drawing.Size(100, 30);
             this.menuProveedores.Text = "Proveedores";
             this.menuProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuProveedores.Click += new System.EventHandler(this.menuProveedores_Click);
             // 
             // menuReportes
             // 
@@ -164,6 +178,7 @@
             this.menuReportes.Size = new System.Drawing.Size(100, 30);
             this.menuReportes.Text = "Reportes";
             this.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuReportes.Click += new System.EventHandler(this.menuReportes_Click);
             // 
             // menuAcercaDe
             // 
@@ -181,7 +196,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 94);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(831, 412);
+            this.contenedor.Size = new System.Drawing.Size(1040, 412);
             this.contenedor.TabIndex = 4;
             // 
             // labelTitulo
@@ -201,7 +216,7 @@
             this.labelUsuarioTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
             this.labelUsuarioTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuarioTitulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuarioTitulo.Location = new System.Drawing.Point(702, 26);
+            this.labelUsuarioTitulo.Location = new System.Drawing.Point(911, 26);
             this.labelUsuarioTitulo.Name = "labelUsuarioTitulo";
             this.labelUsuarioTitulo.Size = new System.Drawing.Size(53, 19);
             this.labelUsuarioTitulo.TabIndex = 6;
@@ -213,17 +228,45 @@
             this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
             this.labelUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuario.Location = new System.Drawing.Point(750, 26);
+            this.labelUsuario.Location = new System.Drawing.Point(959, 26);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(77, 19);
             this.labelUsuario.TabIndex = 7;
             this.labelUsuario.Text = "labelUsuario";
             // 
+            // subMenuRegistrarVenta
+            // 
+            this.subMenuRegistrarVenta.Name = "subMenuRegistrarVenta";
+            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(180, 28);
+            this.subMenuRegistrarVenta.Text = "Registrar";
+            this.subMenuRegistrarVenta.Click += new System.EventHandler(this.subMenuRegistrarVenta_Click);
+            // 
+            // subMenuVerDetalleVenta
+            // 
+            this.subMenuVerDetalleVenta.Name = "subMenuVerDetalleVenta";
+            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(180, 28);
+            this.subMenuVerDetalleVenta.Text = "Ver Detalle";
+            this.subMenuVerDetalleVenta.Click += new System.EventHandler(this.subMenuVerDetalleVenta_Click);
+            // 
+            // subMenuRegistrarCompra
+            // 
+            this.subMenuRegistrarCompra.Name = "subMenuRegistrarCompra";
+            this.subMenuRegistrarCompra.Size = new System.Drawing.Size(180, 28);
+            this.subMenuRegistrarCompra.Text = "Registrar";
+            this.subMenuRegistrarCompra.Click += new System.EventHandler(this.subMenuRegistrarCompra_Click);
+            // 
+            // subMenuVerDetalleCompra
+            // 
+            this.subMenuVerDetalleCompra.Name = "subMenuVerDetalleCompra";
+            this.subMenuVerDetalleCompra.Size = new System.Drawing.Size(180, 28);
+            this.subMenuVerDetalleCompra.Text = "Ver Detalle";
+            this.subMenuVerDetalleCompra.Click += new System.EventHandler(this.subMenuVerDetalleCompra_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 506);
+            this.ClientSize = new System.Drawing.Size(1040, 506);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.labelUsuarioTitulo);
             this.Controls.Add(this.labelTitulo);
@@ -257,8 +300,12 @@
         private System.Windows.Forms.ToolStripMenuItem menuClientes;
         private System.Windows.Forms.Label labelUsuarioTitulo;
         private System.Windows.Forms.Label labelUsuario;
-        private System.Windows.Forms.ToolStripMenuItem menuCategoria;
-        private System.Windows.Forms.ToolStripMenuItem menuProducto;
+        private System.Windows.Forms.ToolStripMenuItem subMenuCategoria;
+        private System.Windows.Forms.ToolStripMenuItem subMenuProducto;
+        private System.Windows.Forms.ToolStripMenuItem subMenuRegistrarVenta;
+        private System.Windows.Forms.ToolStripMenuItem subMenuVerDetalleVenta;
+        private System.Windows.Forms.ToolStripMenuItem subMenuRegistrarCompra;
+        private System.Windows.Forms.ToolStripMenuItem subMenuVerDetalleCompra;
     }
 }
 

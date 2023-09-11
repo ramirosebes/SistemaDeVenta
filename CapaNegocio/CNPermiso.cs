@@ -11,13 +11,13 @@ using CapaEntidad;
 
 namespace CapaNegocio
 {
-    public class CNUsuario
+    public class CNPermiso
     {
-        private CDUsuario objcdUsuario = new CDUsuario();
+        private CDPermiso objcdPermiso = new CDPermiso();
 
-        public List<Usuario> Listar()
+        public List<Permiso> Listar(int idUsuario)
         {
-            return objcdUsuario.Listar();
+            return objcdPermiso.Listar(idUsuario);
         }
     }
 }
