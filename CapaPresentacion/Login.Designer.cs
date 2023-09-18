@@ -44,7 +44,7 @@
             // 
             // buttonSalir
             // 
-            this.buttonSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.buttonSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalir.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,7 +59,7 @@
             // 
             // buttonIngresar
             // 
-            this.buttonIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.buttonIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.buttonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonIngresar.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,8 +120,8 @@
             // 
             // labelLineContrasena
             // 
-            this.labelLineContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.labelLineContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.labelLineContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelLineContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineContrasena.Location = new System.Drawing.Point(24, 263);
             this.labelLineContrasena.Name = "labelLineContrasena";
             this.labelLineContrasena.Size = new System.Drawing.Size(250, 1);
@@ -151,8 +151,8 @@
             // 
             // labelLineDocumento
             // 
-            this.labelLineDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.labelLineDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.labelLineDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelLineDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineDocumento.Location = new System.Drawing.Point(24, 191);
             this.labelLineDocumento.Name = "labelLineDocumento";
             this.labelLineDocumento.Size = new System.Drawing.Size(250, 1);
@@ -162,7 +162,7 @@
             // labelTitulo
             // 
             this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelTitulo.Location = new System.Drawing.Point(36, 24);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(228, 45);

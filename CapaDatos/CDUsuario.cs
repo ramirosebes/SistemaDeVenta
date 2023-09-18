@@ -20,7 +20,7 @@ namespace CapaDatos
             {
                 try
                 {
-                    string query = "select idUsuario, documento, nombreCompleto, correo, clave, estado from USUARIO ";
+                    string query = "select idUsuario, documento, nombreCompleto, correo, clave, estado from USUARIO";
                     //sqlCommand = cmd y rdr = dr
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;

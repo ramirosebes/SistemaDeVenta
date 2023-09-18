@@ -9,3 +9,14 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegoc
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaDatos.pdb
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\bin\Debug\CapaEntidad.pdb
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.pdb
