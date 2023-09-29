@@ -198,6 +198,7 @@
             this.Controls.Add(this.textBoxDocumento);
             this.Controls.Add(this.labelLineDocumento);
             this.Controls.Add(this.labelTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

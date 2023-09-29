@@ -20,3 +20,14 @@ C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\De
 C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\PersonalFolder\PersonalDesktop\Programacion\SistemaDeVenta\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\bin\Debug\CapaEntidad.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\bin\Debug\CapaEntidad.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaNegocio\obj\Debug\CapaNegocio.pdb

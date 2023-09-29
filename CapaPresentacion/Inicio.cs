@@ -19,9 +19,18 @@ namespace CapaPresentacion
         private static ToolStripMenuItem menuActivo = null;
         private static Form formularioActivo;
 
-        public Inicio(Usuario objUsuario)
+        public Inicio(Usuario objUsuario = null)
         {
-            usuarioActual = objUsuario;
+            //Permite registrarse con un usuario nulo para no estar poniendo las credenciales todo el tiempo
+            if (objUsuario == null)
+            {
+                usuarioActual = new Usuario() { nombreCompleto = "ADMIN PREDEFINIDO", idUsuario = 1 };
+            } else
+            {
+                usuarioActual = objUsuario;
+            }
+
+            //usuarioActual = objUsuario;
             InitializeComponent();
         }
 
@@ -64,7 +73,7 @@ namespace CapaPresentacion
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
             //formulario.BackColor = Color.FromArgb(45, 204, 112);
-            formulario.BackColor = Color.White;
+            //formulario.BackColor = Color.White; //Color de fondo del formulario al abrirlo
             contenedor.Controls.Add(formulario);
             formulario.Show();
         }
