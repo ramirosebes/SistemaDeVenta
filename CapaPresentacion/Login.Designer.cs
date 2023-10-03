@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonIngresar = new System.Windows.Forms.Button();
             this.labelTerminosYCondiciones = new System.Windows.Forms.Label();
@@ -199,6 +200,7 @@
             this.Controls.Add(this.labelLineDocumento);
             this.Controls.Add(this.labelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

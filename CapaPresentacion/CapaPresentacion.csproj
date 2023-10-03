@@ -165,6 +165,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -188,6 +189,21 @@
       <Project>{007a9744-d9b0-4021-9051-7cb88fc83ec6}</Project>
       <Name>CapaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkboc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkbox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkbox2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trashcan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
