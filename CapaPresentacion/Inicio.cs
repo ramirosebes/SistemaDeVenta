@@ -24,7 +24,7 @@ namespace CapaPresentacion
             //Permite registrarse con un usuario nulo para no estar poniendo las credenciales todo el tiempo
             if (objUsuario == null)
             {
-                usuarioActual = new Usuario() { nombreCompleto = "ADMIN PREDEFINIDO", idUsuario = 1 };
+                usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
             } else
             {
                 usuarioActual = objUsuario;
@@ -36,14 +36,14 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            List<Permiso> listaPermisos = new CNPermiso().Listar(usuarioActual.idUsuario);
+            List<Permiso> listaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
 
             foreach (ToolStripMenuItem menu in menu.Items)
             {
                 //"m" es cada elemento que tiene la lista que trea de SQL.
                 //m.nombreMenu trae los nombres de la base de datos y en menu.Name estan los nombres que yo coloco en el form Inicio como nombre de los MenuItem en la propiedad (name)
                 //Y compara que sean iguales
-                bool encontrado = listaPermisos.Any(m => m.nombreMenu == menu.Name);
+                bool encontrado = listaPermisos.Any(m => m.NombreMenu == menu.Name);
 
                 if (encontrado == false)
                 {
@@ -51,7 +51,7 @@ namespace CapaPresentacion
                 }
             }
 
-            labelUsuario.Text = usuarioActual.nombreCompleto;
+            labelUsuario.Text = usuarioActual.NombreCompleto;
         }
 
         private void abrirFormulario(ToolStripMenuItem menu, Form formulario)

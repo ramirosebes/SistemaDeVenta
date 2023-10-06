@@ -8,7 +8,7 @@ namespace CapaPresentacion.Utilidades
 {
     public class OpcionCombo
     {
-        public string texto { get; set; }
-        public object valor { get; set; }
+        public string Texto { get; set; }
+        public object Valor { get; set; }
     }
 }

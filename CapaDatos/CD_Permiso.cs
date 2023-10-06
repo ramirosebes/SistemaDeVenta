@@ -13,7 +13,7 @@ using CapaEntidad;
 
 namespace CapaDatos
 {
-    public class CDPermiso
+    public class CD_Permiso
     {
         public List<Permiso> Listar(int idUsuario)
         {
@@ -24,13 +24,13 @@ namespace CapaDatos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select p.idRol, p.nombreMenu from PERMISO p");
-                    query.AppendLine("inner join ROL r on r.idRol = p.idRol");
-                    query.AppendLine("inner join USUARIO u on u.idRol = r.idRol");
-                    query.AppendLine("where u.idUsuario = @idUsuario");
+                    query.AppendLine("select p.IdRol, p.NombreMenu from PERMISO p");
+                    query.AppendLine("inner join ROL r on r.IdRol = p.IdRol");
+                    query.AppendLine("inner join USUARIO u on u.IdRol = r.IdRol");
+                    query.AppendLine("where u.IdUsuario = @IdUsuario");
                     //sqlCommand = cmd y rdr = dr
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
-                    cmd.Parameters.AddWithValue("idUsuario", idUsuario);
+                    cmd.Parameters.AddWithValue("IdUsuario", idUsuario);
                     cmd.CommandType = CommandType.Text;
                     oconexion.Open();
                     using (SqlDataReader dr = cmd.ExecuteReader())
@@ -39,8 +39,8 @@ namespace CapaDatos
                         {
                             lista.Add(new Permiso()
                             {
-                                oRol = new Rol() { idRol = Convert.ToInt32(dr["idRol"]) },
-                                nombreMenu = dr["nombreMenu"].ToString(),
+                                oRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]) },
+                                NombreMenu = dr["NombreMenu"].ToString(),
                             });
                         }
 

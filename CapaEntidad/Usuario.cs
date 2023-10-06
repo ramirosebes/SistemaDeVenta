@@ -8,13 +8,13 @@ namespace CapaEntidad
 {
     public class Usuario
     {
-        public int idUsuario { get; set; }
-        public string documento { get; set; }
-        public string nombreCompleto { get; set; }
-        public string correo { get; set; }
-        public string clave { get; set; }
+        public int IdUsuario { get; set; }
+        public string Documento { get; set; }
+        public string NombreCompleto { get; set; }
+        public string Correo { get; set; }
+        public string Clave { get; set; }
         public Rol oRol { get; set; }
-        public bool estado { get; set; }
-        public string fechaRegistro { get; set; }
+        public bool Estado { get; set; }
+        public string FechaRegistro { get; set; }
     }
 }

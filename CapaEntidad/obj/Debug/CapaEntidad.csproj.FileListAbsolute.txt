@@ -4,3 +4,9 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaEntid
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaEntidad\obj\Debug\CapaEntidad.dll
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\SistemaDeVenta\CapaEntidad\obj\Debug\CapaEntidad.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.pdb

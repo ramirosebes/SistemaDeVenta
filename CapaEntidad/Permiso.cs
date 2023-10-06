@@ -8,9 +8,9 @@ namespace CapaEntidad
 {
     public class Permiso
     {
-        public int idPermiso {  get; set; }
+        public int IdPermiso {  get; set; }
         public Rol oRol { get; set; }
-        public string nombreMenu { get; set; }
-        public string fechaRegistro { get; set; }
+        public string NombreMenu { get; set; }
+        public string FechaRegistro { get; set; }
     }
 }

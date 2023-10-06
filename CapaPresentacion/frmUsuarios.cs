@@ -23,56 +23,79 @@ namespace CapaPresentacion
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            comboBoxEstado.Items.Add(new OpcionCombo() { valor = 1 , texto = "Activo" });
-            comboBoxEstado.Items.Add(new OpcionCombo() { valor = 0 , texto = "No activo" });
-            comboBoxEstado.DisplayMember = "texto";
-            comboBoxEstado.ValueMember = "valor";
+            comboBoxEstado.Items.Add(new OpcionCombo() { Valor = 1 , Texto = "Activo" });
+            comboBoxEstado.Items.Add(new OpcionCombo() { Valor = 0 , Texto = "No activo" });
+            comboBoxEstado.DisplayMember = "Texto";
+            comboBoxEstado.ValueMember = "Valor";
             comboBoxEstado.SelectedIndex = 0;
 
-            List<Rol> listaRol = new CNRol().Listar();
+            List<Rol> listaRol = new CN_Rol().Listar();
 
             foreach (Rol item in listaRol)
             {
-                comboBoxRol.Items.Add(new OpcionCombo() { valor = item.idRol, texto = item.descripcion });
+                comboBoxRol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
             }
-            comboBoxRol.DisplayMember = "texto";
-            comboBoxRol.ValueMember = "valor";
+            comboBoxRol.DisplayMember = "Texto";
+            comboBoxRol.ValueMember = "Valor";
             comboBoxRol.SelectedIndex = 0;
 
             foreach (DataGridViewColumn columna in dataGridViewData.Columns)
             {
                 if (columna.Visible == true && columna.Name != "buttonSeleccionar")
                 {
-                    comboBoxBusqueda.Items.Add(new OpcionCombo() { valor = columna.Name, texto = columna.HeaderText });                   
+                    comboBoxBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });                   
                 }
             }
-            comboBoxBusqueda.DisplayMember = "texto";
-            comboBoxBusqueda.ValueMember = "valor";
+            comboBoxBusqueda.DisplayMember = "Texto";
+            comboBoxBusqueda.ValueMember = "Valor";
             comboBoxBusqueda.SelectedIndex = 0;
 
             //Mostrar todos los usuarios
-            List<Usuario> listaUsuario = new CNUsuario().Listar();
+            List<Usuario> listaUsuario = new CN_Usuario().Listar();
 
             foreach (Usuario item in listaUsuario)
             {
-                dataGridViewData.Rows.Add(new object[] {"", item.idUsuario, item.documento, item.nombreCompleto, item.correo, item.clave,
-                    item.oRol.idRol,
-                    item.oRol.descripcion,
-                    item.estado == true ? "Activo" : "No activo",
-                    item.estado == true ? 1 : 0, //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
+                dataGridViewData.Rows.Add(new object[] {"", item.IdUsuario, item.Documento, item.NombreCompleto, item.Correo, item.Clave,
+                    item.oRol.IdRol,
+                    item.oRol.Descripcion,
+                    item.Estado == true ? "Activo" : "No activo",
+                    item.Estado == true ? 1 : 0, //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
                 });
             }
         }
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            //dataGridViewData.Rows.Add(new object[] {"", textBoxID.Text, textBoxDocumento.Text, textBoxNombreCompleto.Text, textBoxCorreo.Text, textBoxClave.Text,
-            //    ((OpcionCombo)comboBoxRol.SelectedItem).valor.ToString(),
-            //    ((OpcionCombo)comboBoxRol.SelectedItem).texto.ToString(),
-            //    ((OpcionCombo)comboBoxEstado.SelectedItem).texto.ToString(),
-            //    ((OpcionCombo)comboBoxEstado.SelectedItem).valor.ToString(), //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
-            //});
-            //Limpiar();
+            string mensaje = string.Empty;
+
+            Usuario objUsuario = new Usuario()
+            {
+                IdUsuario = Convert.ToInt32(textBoxID.Text),
+                Documento = textBoxDocumento.Text,
+                NombreCompleto = textBoxNombreCompleto.Text,
+                Correo = textBoxCorreo.Text,
+                Clave = textBoxClave.Text,
+                oRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)comboBoxRol.SelectedItem).Valor) },
+                Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
+            };
+
+            int idUsuarioGenerado = new CN_Usuario().Registrar(objUsuario, out mensaje);
+
+            if (idUsuarioGenerado != 0)
+            {
+                dataGridViewData.Rows.Add(new object[] {"", idUsuarioGenerado, textBoxDocumento.Text, textBoxNombreCompleto.Text, textBoxCorreo.Text, textBoxClave.Text,
+                    ((OpcionCombo)comboBoxRol.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)comboBoxRol.SelectedItem).Texto.ToString(),
+                    ((OpcionCombo)comboBoxEstado.SelectedItem).Texto.ToString(),
+                    ((OpcionCombo)comboBoxEstado.SelectedItem).Valor.ToString(), //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
+                });
+
+                Limpiar();
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
         }
 
         private void Limpiar()
@@ -115,18 +138,18 @@ namespace CapaPresentacion
                 if (indice >= 0)
                 {
                     textBoxIndice.Text = indice.ToString();
-                    textBoxID.Text = dataGridViewData.Rows[indice].Cells["idUsuario"].Value.ToString();
-                    textBoxDocumento.Text = dataGridViewData.Rows[indice].Cells["documento"].Value.ToString();
-                    textBoxNombreCompleto.Text = dataGridViewData.Rows[indice].Cells["nombreCompleto"].Value.ToString();
-                    textBoxCorreo.Text = dataGridViewData.Rows[indice].Cells["correo"].Value.ToString();
-                    textBoxClave.Text = dataGridViewData.Rows[indice].Cells["clave"].Value.ToString();
-                    textBoxConfirmarClave.Text = dataGridViewData.Rows[indice].Cells["clave"].Value.ToString();
+                    textBoxID.Text = dataGridViewData.Rows[indice].Cells["IdUsuario"].Value.ToString();
+                    textBoxDocumento.Text = dataGridViewData.Rows[indice].Cells["Documento"].Value.ToString();
+                    textBoxNombreCompleto.Text = dataGridViewData.Rows[indice].Cells["NombreCompleto"].Value.ToString();
+                    textBoxCorreo.Text = dataGridViewData.Rows[indice].Cells["Correo"].Value.ToString();
+                    textBoxClave.Text = dataGridViewData.Rows[indice].Cells["Clave"].Value.ToString();
+                    textBoxConfirmarClave.Text = dataGridViewData.Rows[indice].Cells["Clave"].Value.ToString();
                     //comboBoxRol.SelectedValue = dataGridViewData.Rows[indice].Cells["idRol"].Value.ToString();
                     //comboBoxEstado.SelectedValue = dataGridViewData.Rows[indice].Cells["estado"].Value.ToString();
 
                     foreach (OpcionCombo oc in comboBoxRol.Items)
                     {
-                        if (Convert.ToInt32(oc.valor) == Convert.ToInt32(dataGridViewData.Rows[indice].Cells["idRol"].Value))
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dataGridViewData.Rows[indice].Cells["IdRol"].Value))
                         {
                             int indiceCombo = comboBoxRol.Items.IndexOf(oc);
                             comboBoxRol.SelectedIndex = indiceCombo;
@@ -136,7 +159,7 @@ namespace CapaPresentacion
 
                     foreach (OpcionCombo oc in comboBoxEstado.Items)
                     {
-                        if (Convert.ToInt32(oc.valor) == Convert.ToInt32(dataGridViewData.Rows[indice].Cells["estadoValor"].Value))
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dataGridViewData.Rows[indice].Cells["EstadoValor"].Value))
                         {
                             int indiceCombo = comboBoxEstado.Items.IndexOf(oc);
                             comboBoxEstado.SelectedIndex = indiceCombo;

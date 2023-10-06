@@ -8,15 +8,15 @@ namespace CapaEntidad
 {
     public class Producto
     {
-        public int idProducto { get; set; }
-        public string codigo { get; set; }
-        public string nombre { get; set; }
-        public string descipcion { get; set; }
+        public int IdProducto { get; set; }
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Descipcion { get; set; }
         public Categoria oCategoria { get; set; }
-        public int stock { get; set; }
-        public decimal precioCompra { get; set; }
-        public decimal precioVenta { get; set; }
-        public bool estado { get; set; }
-        public string fechaRegistro { get; set; }
+        public int Stock { get; set; }
+        public decimal PrecioCompra { get; set; }
+        public decimal PrecioVenta { get; set; }
+        public bool Estado { get; set; }
+        public string FechaRegistro { get; set; }
     }
 }

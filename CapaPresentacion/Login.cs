@@ -32,8 +32,8 @@ namespace CapaPresentacion
 
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
-            List<Usuario> TEST = new CNUsuario().Listar();
-            Usuario oUsuario = new CNUsuario().Listar().Where(u => u.documento == textBoxDocumento.Text && u.clave == textBoxClave.Text).FirstOrDefault();
+            List<Usuario> TEST = new CN_Usuario().Listar();
+            Usuario oUsuario = new CN_Usuario().Listar().Where(u => u.Documento == textBoxDocumento.Text && u.Clave == textBoxClave.Text).FirstOrDefault();
 
             if (oUsuario != null)
             {

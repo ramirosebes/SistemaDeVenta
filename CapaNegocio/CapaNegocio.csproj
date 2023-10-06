@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CNPermiso.cs" />
-    <Compile Include="CNRol.cs" />
-    <Compile Include="CNUsuario.cs" />
+    <Compile Include="CN_Permiso.cs" />
+    <Compile Include="CN_Rol.cs" />
+    <Compile Include="CN_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

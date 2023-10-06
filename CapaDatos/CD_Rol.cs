@@ -13,7 +13,7 @@ using CapaEntidad;
 
 namespace CapaDatos
 {
-    public class CDRol
+    public class CD_Rol
     {
         public List<Rol> Listar()
         {
@@ -24,7 +24,7 @@ namespace CapaDatos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select idRol, descripcion from ROL");
+                    query.AppendLine("select IdRol, Descripcion from ROL");
 
                     //sqlCommand = cmd y rdr = dr
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
@@ -38,8 +38,8 @@ namespace CapaDatos
                         {
                             lista.Add(new Rol()
                             {
-                                idRol = Convert.ToInt32(dr["idRol"]),
-                                descripcion = dr["descripcion"].ToString(),
+                                IdRol = Convert.ToInt32(dr["IdRol"]),
+                                Descripcion = dr["Descripcion"].ToString(),
                             });
                         }
                     }

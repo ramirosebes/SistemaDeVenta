@@ -10,9 +10,9 @@ namespace CapaDatos
     public class Conexion
     {
         //Desktop
-        // Data Source=DESKTOP-RAMIRO;Initial Catalog=DBSistemaVenta;Integrated Security=True
+        // Data Source=DESKTOP-RAMIRO;Initial Catalog=DB_SERVICIO_DE_COLOR;Integrated Security=True
         // Notebook
-        // Data Source=NOTEBOOK-RAMIRO;Initial Catalog=DBSistemaVenta;Integrated Security=True
+        // Data Source=NOTEBOOK-RAMIRO;Initial Catalog=DB_SERVICIO_DE_COLOR;Integrated Security=True
 
         public static string cadena = ConfigurationManager.ConnectionStrings["cadenaConexion"].ToString();
     }
