@@ -79,23 +79,53 @@ namespace CapaPresentacion
                 Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
-            int idUsuarioGenerado = new CN_Usuario().Registrar(objUsuario, out mensaje);
-
-            if (idUsuarioGenerado != 0)
+            if (objUsuario.IdUsuario == 0) //Si es un usuario nuevo
             {
-                dataGridViewData.Rows.Add(new object[] {"", idUsuarioGenerado, textBoxDocumento.Text, textBoxNombreCompleto.Text, textBoxCorreo.Text, textBoxClave.Text,
+                int idUsuarioGenerado = new CN_Usuario().Registrar(objUsuario, out mensaje);
+
+
+                if (idUsuarioGenerado != 0)
+                {
+                    dataGridViewData.Rows.Add(new object[] {"", idUsuarioGenerado, textBoxDocumento.Text, textBoxNombreCompleto.Text, textBoxCorreo.Text, textBoxClave.Text,
                     ((OpcionCombo)comboBoxRol.SelectedItem).Valor.ToString(),
                     ((OpcionCombo)comboBoxRol.SelectedItem).Texto.ToString(),
                     ((OpcionCombo)comboBoxEstado.SelectedItem).Texto.ToString(),
                     ((OpcionCombo)comboBoxEstado.SelectedItem).Valor.ToString(), //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
                 });
 
-                Limpiar();
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
-            else
+            else //Si es un usuario ya registrado
             {
-                MessageBox.Show(mensaje);
+                bool resultado = new CN_Usuario().Editar(objUsuario, out mensaje);
+
+                if (resultado)
+                {
+                    //Una vez que se guarde se actualiza en el DataGridView
+                    DataGridViewRow row = dataGridViewData.Rows[Convert.ToInt32(textBoxIndice.Text)];
+                    row.Cells["Id"].Value = textBoxID.Text;
+                    row.Cells["Documento"].Value = textBoxDocumento.Text;
+                    row.Cells["NombreCompleto"].Value = textBoxNombreCompleto.Text;
+                    row.Cells["Correo"].Value = textBoxCorreo.Text;
+                    row.Cells["Clave"].Value = textBoxClave.Text;
+                    row.Cells["IdRol"].Value = ((OpcionCombo)comboBoxRol.SelectedItem).Valor.ToString();
+                    row.Cells["Rol"].Value = ((OpcionCombo)comboBoxRol.SelectedItem).Texto.ToString();
+                    row.Cells["EstadoValor"].Value = ((OpcionCombo)comboBoxEstado.SelectedItem).Valor.ToString();
+                    row.Cells["Estado"].Value = ((OpcionCombo)comboBoxEstado.SelectedItem).Texto.ToString();
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }   
             }
+
+            
         }
 
         private void Limpiar()
@@ -109,6 +139,8 @@ namespace CapaPresentacion
             textBoxConfirmarClave.Clear();
             comboBoxRol.SelectedIndex = 0;
             comboBoxEstado.SelectedIndex = 0;
+
+            textBoxDocumento.Select();
         }
 
         private void dataGridViewData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -120,12 +152,12 @@ namespace CapaPresentacion
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
-                var w = Properties.Resources.Checkbox2.Width;
-                var h = Properties.Resources.Checkbox2.Height;
+                var w = Properties.Resources.Checkbox1.Width;
+                var h = Properties.Resources.Checkbox1.Height;
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-                e.Graphics.DrawImage(Properties.Resources.Checkbox2, new Rectangle(x, y, w, h));
+                e.Graphics.DrawImage(Properties.Resources.Checkbox1, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
         }
@@ -138,7 +170,7 @@ namespace CapaPresentacion
                 if (indice >= 0)
                 {
                     textBoxIndice.Text = indice.ToString();
-                    textBoxID.Text = dataGridViewData.Rows[indice].Cells["IdUsuario"].Value.ToString();
+                    textBoxID.Text = dataGridViewData.Rows[indice].Cells["Id"].Value.ToString();
                     textBoxDocumento.Text = dataGridViewData.Rows[indice].Cells["Documento"].Value.ToString();
                     textBoxNombreCompleto.Text = dataGridViewData.Rows[indice].Cells["NombreCompleto"].Value.ToString();
                     textBoxCorreo.Text = dataGridViewData.Rows[indice].Cells["Correo"].Value.ToString();
@@ -167,6 +199,62 @@ namespace CapaPresentacion
                         }
                     }
                 }
+            }
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(textBoxID.Text) != 0 )
+            {
+                if(MessageBox.Show("¿Desae eliminar el usuario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+
+                    Usuario objUsuario = new Usuario()
+                    {
+                        IdUsuario = Convert.ToInt32(textBoxID.Text),
+                    };
+
+                    bool respuesta = new CN_Usuario().Eliminar(objUsuario, out mensaje);
+
+                    if(respuesta)
+                    {
+                        dataGridViewData.Rows.RemoveAt(Convert.ToInt32(textBoxIndice.Text)); //Elimina la fila del DataGridView
+                    } 
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            string columnaFiltro = ((OpcionCombo)comboBoxBusqueda.SelectedItem).Valor.ToString();
+
+            if (dataGridViewData.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewData.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(textBoxBusqueda.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true; //Muestra la fila
+                    }
+                    else
+                    {
+                        row.Visible = false; //Oculta la fila
+                    }
+                }
+            }
+        }
+
+        private void buttonLimpiarBuscardor_Click(object sender, EventArgs e)
+        {
+            textBoxBusqueda.Clear();
+            foreach (DataGridViewRow row in dataGridViewData.Rows)
+            {
+                row.Visible = true;
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -118,8 +118,8 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
                     //Parametro de salida
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar).Direction = ParameterDirection.Output; //NvarChar ya que yo lo declare la variable como nvarchar en SQL
+                    cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar,500).Direction = ParameterDirection.Output; //NvarChar ya que yo lo declare la variable como nvarchar en SQL
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -127,7 +127,7 @@ namespace CapaDatos
 
                     cmd.ExecuteNonQuery();
 
-                    respuesta = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
+                    respuesta = Convert.ToBoolean(cmd.Parameters["Respuesta"].Value);
                     Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
 
@@ -156,7 +156,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
                     //Parametro de salida
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar).Direction = ParameterDirection.Output; //NvarChar ya que yo lo declare la variable como nvarchar en SQL
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar,500).Direction = ParameterDirection.Output; //NvarChar ya que yo lo declare la variable como nvarchar en SQL
 
                     cmd.CommandType = CommandType.StoredProcedure;
 

@@ -50,8 +50,7 @@ select p.IdRol, p.NombreMenu from PERMISO p
 select * from PERMISO;
 
 -------------------------------------------------------------------------------- VIDEO 5 --------------------------------------------------------------------------------
-select u.IdUsuario, u.Documento, u.NombreCompleto, u.Correo, u.Clave, u.Estado, r.IdRol, r.Descripcion from USUARIO u
-inner join	 rol r on r.IdRol = u.IdRol
+ 
 
 --update USUARIO set estado = 0 where IdUsuario = 2;
 
@@ -156,8 +155,8 @@ begin
 	set @Mensaje = ''
 	declare @pasoreglas bit = 1
 
-	if not exists (select * from COMPRA c
-	inner join USUARIO u on u.IdRol = c.IdUsuario
+	if exists (select * from COMPRA c
+	inner join USUARIO u on u.IdUsuario = c.IdUsuario
 	where u.IdUsuario = @IdUsuario)
 	begin
 		set @pasoreglas = 0
@@ -165,9 +164,9 @@ begin
 		set @Mensaje = @Mensaje + 'No se puede eliminar porue el usuario se encuentra relacionado a una COMPRA\n'
 	end
 
-	if not exists (select * from VENTA v
-	inner join USUARIO u on u.IdRol = v.IdUsuario
-	where v.IdUsuario = @IdUsuario)
+	if exists (select * from VENTA v
+	inner join USUARIO u on u.IdUsuario = v.IdUsuario
+	where u.IdUsuario = @IdUsuario)
 	begin
 		set @pasoreglas = 0
 		set @Respuesta = 0

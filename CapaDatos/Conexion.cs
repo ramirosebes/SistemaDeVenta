@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Data.SqlClient;
 
 namespace CapaDatos
 {
@@ -17,3 +18,4 @@ namespace CapaDatos
         public static string cadena = ConfigurationManager.ConnectionStrings["cadenaConexion"].ToString();
     }
 }
+

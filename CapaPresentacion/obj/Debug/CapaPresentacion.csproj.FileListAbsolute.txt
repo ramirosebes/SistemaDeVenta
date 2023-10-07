@@ -65,7 +65,6 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPres
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\CapaNegocio.pdb
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\CapaDatos.pdb
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
-D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.SuggestedBindingRedirects.cache
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmCategoria.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmClientes.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmCompras.resources

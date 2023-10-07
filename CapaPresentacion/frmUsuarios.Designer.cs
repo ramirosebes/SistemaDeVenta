@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
@@ -56,7 +56,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,9 +71,9 @@
             this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
-            this.buttonBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxIndice = new System.Windows.Forms.TextBox();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +93,7 @@
             this.comboBoxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRol.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRol.FormattingEnabled = true;
+            this.comboBoxRol.ItemHeight = 19;
             this.comboBoxRol.Location = new System.Drawing.Point(25, 422);
             this.comboBoxRol.Name = "comboBoxRol";
             this.comboBoxRol.Size = new System.Drawing.Size(200, 27);
@@ -103,6 +104,7 @@
             this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEstado.FormattingEnabled = true;
+            this.comboBoxEstado.ItemHeight = 19;
             this.comboBoxEstado.Location = new System.Drawing.Point(25, 484);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
@@ -129,7 +131,7 @@
             this.buttonGuardar.Location = new System.Drawing.Point(50, 517);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(150, 30);
-            this.buttonGuardar.TabIndex = 15;
+            this.buttonGuardar.TabIndex = 8;
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.UseVisualStyleBackColor = false;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
@@ -144,7 +146,7 @@
             this.buttonLimpiar.Location = new System.Drawing.Point(50, 553);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(150, 30);
-            this.buttonLimpiar.TabIndex = 16;
+            this.buttonLimpiar.TabIndex = 9;
             this.buttonLimpiar.Text = "Vaciar campos";
             this.buttonLimpiar.UseVisualStyleBackColor = false;
             // 
@@ -158,9 +160,10 @@
             this.buttonEliminar.Location = new System.Drawing.Point(50, 589);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(150, 30);
-            this.buttonEliminar.TabIndex = 17;
+            this.buttonEliminar.TabIndex = 10;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // labelDocumento
             // 
@@ -182,7 +185,7 @@
             this.textBoxDocumento.Location = new System.Drawing.Point(25, 103);
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(200, 20);
-            this.textBoxDocumento.TabIndex = 19;
+            this.textBoxDocumento.TabIndex = 1;
             // 
             // labelLineDocumento
             // 
@@ -223,7 +226,7 @@
             this.textBoxNombreCompleto.Location = new System.Drawing.Point(25, 168);
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
             this.textBoxNombreCompleto.Size = new System.Drawing.Size(200, 20);
-            this.textBoxNombreCompleto.TabIndex = 22;
+            this.textBoxNombreCompleto.TabIndex = 2;
             // 
             // labelLineNombreCompleto
             // 
@@ -256,7 +259,7 @@
             this.textBoxClave.Name = "textBoxClave";
             this.textBoxClave.PasswordChar = '*';
             this.textBoxClave.Size = new System.Drawing.Size(200, 20);
-            this.textBoxClave.TabIndex = 28;
+            this.textBoxClave.TabIndex = 4;
             // 
             // labelLineClave
             // 
@@ -288,7 +291,7 @@
             this.textBoxCorreo.Location = new System.Drawing.Point(25, 233);
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
-            this.textBoxCorreo.TabIndex = 25;
+            this.textBoxCorreo.TabIndex = 3;
             // 
             // labelLineCorreo
             // 
@@ -321,7 +324,7 @@
             this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
             this.textBoxConfirmarClave.PasswordChar = '*';
             this.textBoxConfirmarClave.Size = new System.Drawing.Size(200, 20);
-            this.textBoxConfirmarClave.TabIndex = 31;
+            this.textBoxConfirmarClave.TabIndex = 5;
             // 
             // labelLineConfirmarClave
             // 
@@ -347,19 +350,19 @@
             // dataGridViewData
             // 
             this.dataGridViewData.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buttonSeleccionar,
-            this.IdUsuario,
+            this.Id,
             this.Documento,
             this.NombreCompleto,
             this.Correo,
@@ -372,14 +375,14 @@
             this.dataGridViewData.MultiSelect = false;
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewData.RowTemplate.Height = 28;
             this.dataGridViewData.Size = new System.Drawing.Size(840, 509);
             this.dataGridViewData.TabIndex = 34;
@@ -393,12 +396,12 @@
             this.buttonSeleccionar.ReadOnly = true;
             this.buttonSeleccionar.Width = 30;
             // 
-            // IdUsuario
+            // Id
             // 
-            this.IdUsuario.HeaderText = "IdUsuario";
-            this.IdUsuario.Name = "IdUsuario";
-            this.IdUsuario.ReadOnly = true;
-            this.IdUsuario.Visible = false;
+            this.Id.HeaderText = "IdUsuario";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
             // Documento
             // 
@@ -472,7 +475,8 @@
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(29, 20);
             this.textBoxID.TabIndex = 40;
-            this.textBoxID.Text = "-1";
+            this.textBoxID.Text = "0";
+            this.textBoxID.Visible = false;
             // 
             // labelBuscarPor
             // 
@@ -491,6 +495,7 @@
             this.comboBoxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBusqueda.FormattingEnabled = true;
+            this.comboBoxBusqueda.ItemHeight = 19;
             this.comboBoxBusqueda.Location = new System.Drawing.Point(626, 50);
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(174, 27);
@@ -505,7 +510,7 @@
             this.textBoxBusqueda.Location = new System.Drawing.Point(806, 50);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(175, 20);
-            this.textBoxBusqueda.TabIndex = 43;
+            this.textBoxBusqueda.TabIndex = 12;
             // 
             // buttonLimpiarBuscardor
             // 
@@ -517,23 +522,10 @@
             this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(1055, 50);
             this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
             this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(62, 30);
-            this.buttonLimpiarBuscardor.TabIndex = 45;
+            this.buttonLimpiarBuscardor.TabIndex = 14;
             this.buttonLimpiarBuscardor.Text = "Limpiar";
             this.buttonLimpiarBuscardor.UseVisualStyleBackColor = false;
-            // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Location = new System.Drawing.Point(987, 50);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(62, 30);
-            this.buttonBuscar.TabIndex = 44;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonLimpiarBuscardor.Click += new System.EventHandler(this.buttonLimpiarBuscardor_Click);
             // 
             // label1
             // 
@@ -552,6 +544,22 @@
             this.textBoxIndice.Size = new System.Drawing.Size(29, 20);
             this.textBoxIndice.TabIndex = 47;
             this.textBoxIndice.Text = "-1";
+            this.textBoxIndice.Visible = false;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonBuscar.Location = new System.Drawing.Point(987, 50);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(62, 30);
+            this.buttonBuscar.TabIndex = 13;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // frmUsuarios
             // 
@@ -638,7 +646,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxIndice;
         private System.Windows.Forms.DataGridViewButtonColumn buttonSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
