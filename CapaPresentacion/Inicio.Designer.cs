@@ -237,7 +237,7 @@
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(180, 30);
             this.labelTitulo.TabIndex = 5;
-            this.labelTitulo.Text = "Sistema de Ventas";
+            this.labelTitulo.Text = "Servicio De Color";
             // 
             // labelUsuarioTitulo
             // 

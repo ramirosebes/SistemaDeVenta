@@ -5,17 +5,17 @@ select * from ROL;
 
 select * from PERMISO;
 
---insert into ROL (descripcion)
---	values('ADMINISTRADOR');
+insert into ROL (descripcion)
+	values('ADMINISTRADOR');
 
---insert into ROL (descripcion)
---	values('EMPLEADO');
+insert into ROL (descripcion)
+	values('EMPLEADO');
 
---insert into USUARIO(documento,	nombreCompleto, correo, clave, idRol)
---	values('101010', 'ADMIN', '@GMAIL.COM', '123', 1);
+insert into USUARIO(documento,	nombreCompleto, correo, clave, idRol)
+	values('101010', 'ADMIN', '@GMAIL.COM', '123', 1);
 
---insert into USUARIO(documento,	nombreCompleto, correo, clave, idRol)
---	values('202020', 'EMPLEADO', '@GMAIL.COM', '456', 2);
+insert into USUARIO(documento,	nombreCompleto, correo, clave, idRol)
+	values('202020', 'EMPLEADO', '@GMAIL.COM', '456', 2);
 
 
 -------------------------------------------------------------------------------- VIDEO 3 --------------------------------------------------------------------------------
@@ -26,22 +26,22 @@ select p.IdRol, p.NombreMenu from PERMISO p
 	inner join USUARIO u on u.IdRol = r.IdRol
 	where u.IdUsuario = 2
 
---insert into PERMISO(idRol, nombreMenu) values 
---	(1, 'menuUsuarios'),
---	(1, 'menuMantenedor'),
---	(1, 'menuVentas'),
---	(1, 'menuCompras'),
---	(1, 'menuClientes'),
---	(1, 'menuProveedores'),
---	(1, 'menuReportes'),
---	(1, 'menuAcercaDe');
+insert into PERMISO(idRol, nombreMenu) values 
+	(1, 'menuUsuarios'),
+	(1, 'menuMantenedor'),
+	(1, 'menuVentas'),
+	(1, 'menuCompras'),
+	(1, 'menuClientes'),
+	(1, 'menuProveedores'),
+	(1, 'menuReportes'),
+	(1, 'menuAcercaDe');
 
---insert into PERMISO(idRol, nombreMenu) values 
---	(2, 'menuVentas'),
---	(2, 'menuCompras'),
---	(2, 'menuClientes'),
---	(2, 'menuProveedores'),
---	(2, 'menuAcercaDe');
+insert into PERMISO(idRol, nombreMenu) values 
+	(2, 'menuVentas'),
+	(2, 'menuCompras'),
+	(2, 'menuClientes'),
+	(2, 'menuProveedores'),
+	(2, 'menuAcercaDe');
 
 
 --DELETE FROM PERMISO; --Elimina los registros de la tabla
@@ -50,8 +50,6 @@ select p.IdRol, p.NombreMenu from PERMISO p
 select * from PERMISO;
 
 -------------------------------------------------------------------------------- VIDEO 5 --------------------------------------------------------------------------------
- 
-
 --update USUARIO set estado = 0 where IdUsuario = 2;
 
 ---------- PROCEDIMIENTO ALMACENADO REGISTRAR USUARIO----------
@@ -84,14 +82,14 @@ end
 
 --DROP PROCEDURE SP_REGISTRARUSUARIO; -- Elimina el procedimiento almacenado
 
----------- AGREGAR UN USUARIO ----------
-declare @IdUsuarioGenerado int
-declare @Mensaje nvarchar(500)
+------------ AGREGAR UN USUARIO ----------
+--declare @IdUsuarioGenerado int
+--declare @Mensaje nvarchar(500)
 
-exec SP_REGISTRARUSUARIO '123', 'pruebas', 'test@gmail.com', '456', 2, 1, @IdUsuarioGenerado output, @Mensaje output
+--exec SP_REGISTRARUSUARIO '123', 'pruebas', 'test@gmail.com', '456', 2, 1, @IdUsuarioGenerado output, @Mensaje output
 
-select @IdUsuarioGenerado
-select @Mensaje
+--select @IdUsuarioGenerado
+--select @Mensaje
 
 go
 
@@ -129,18 +127,20 @@ begin
 		set @Mensaje = 'No se puede repetir el documento para más de un usuario'
 end
 
+go
+
 --DROP PROCEDURE SP_EDITARUSUARIO; -- Elimina el procedimiento almacenado
 
 ---------- EDITAR UN USUARIO ----------
-select * from USUARIO --Me lo agrego anteriormente con el ID "1002"
+--select * from USUARIO --Me lo agrego anteriormente con el ID "1002"
 
-declare @Respuesta bit
-declare @Mensaje nvarchar(500)
+--declare @Respuesta bit
+--declare @Mensaje nvarchar(500)
 
-exec SP_EDITARUSUARIO 2,'123', 'pruebas 2', 'test@gmail.com', '456', 2, 1, @Respuesta output, @Mensaje output
+--exec SP_EDITARUSUARIO 2,'123', 'pruebas 2', 'test@gmail.com', '456', 2, 1, @Respuesta output, @Mensaje output
 
-select @Respuesta
-select @Mensaje
+--select @Respuesta
+--select @Mensaje
 
 -------------------------------------------------------------------------------- VIDEO 6 --------------------------------------------------------------------------------
 ---------- PROCEDIMIENTO ALMACENADO ELIMINAR USUARIO----------
@@ -155,6 +155,7 @@ begin
 	set @Mensaje = ''
 	declare @pasoreglas bit = 1
 
+	--Si el usuario esta involucrado en una compra no se puede eliminar
 	if exists (select * from COMPRA c
 	inner join USUARIO u on u.IdUsuario = c.IdUsuario
 	where u.IdUsuario = @IdUsuario)
@@ -164,6 +165,7 @@ begin
 		set @Mensaje = @Mensaje + 'No se puede eliminar porue el usuario se encuentra relacionado a una COMPRA\n'
 	end
 
+	--Si el usuario esta involucrado en una venta no se puede eliminar
 	if exists (select * from VENTA v
 	inner join USUARIO u on u.IdUsuario = v.IdUsuario
 	where u.IdUsuario = @IdUsuario)
@@ -179,3 +181,86 @@ begin
 		set @Respuesta = 1
 	end
 end
+
+go
+
+-------------------------------------------------------------------------------- VIDEO 8 --------------------------------------------------------------------------------
+
+---------- PROCEDIMIENTO ALMACENADO GUARDAR CATEGORIA----------
+create proc SP_REGISTRARCATEGORIA (
+	@Descripcion nvarchar(50),
+	@Estado bit,
+	@Resultado int output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 0
+	--set @Mensaje = ''
+	if not exists (select * from CATEGORIA where Descripcion = @Descripcion)
+	begin
+		insert into CATEGORIA(Descripcion, Estado) values (@Descripcion, @Estado)
+		set @Resultado = SCOPE_IDENTITY()
+	end
+	else
+		set	@Mensaje = 'No se puede repetir la descripcion de una caterogria'
+end
+
+go
+
+---------- PROCEDIMIENTO ALMACENADO EDITAR CATEGORIA----------
+create procedure SP_EDITARCATEGORIA (
+	@IdCategoria int,
+	@Descripcion nvarchar(50),
+	@Estado bit,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	--set @Mensaje = ''
+	if not exists (select * from CATEGORIA where Descripcion = @Descripcion and IdCategoria != @IdCategoria)
+		update CATEGORIA set
+		Descripcion = @Descripcion,
+		Estado = @Estado
+		where IdCategoria = @IdCategoria
+	else
+	begin
+		set @Resultado = 0
+		set	@Mensaje = 'No se puede repetir la descripcion de una caterogria'
+	end
+end
+
+go
+
+---------- PROCEDIMIENTO ALMACENADO ELIMINAR CATEGORIA----------
+create procedure SP_ELIMINARCATEGORIA (
+	@IdCategoria int,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	if not exists (
+		select * from CATEGORIA c
+		inner join PRODUCTO p on p.IdCategoria = c.IdCategoria
+		where c.IdCategoria = @IdCategoria
+	)
+	begin
+		delete top(1) from CATEGORIA where IdCategoria = @IdCategoria
+	end
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'La categoria se encuentra relacionada a un producto'
+	end
+end
+
+--Para guardar un cambio en el procedimiento almacenado se coloca ALTER PROC.... y los cambios hechos dentro del procedimiento almacenado
+
+---------- INSERTS ----------
+insert into CATEGORIA (Descipcion, Estado) values ('Colores', 1);
+insert into CATEGORIA (Descipcion, Estado) values ('Masillas', 1);
+insert into CATEGORIA (Descipcion, Estado) values ('Colores', 1);

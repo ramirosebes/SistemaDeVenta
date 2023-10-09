@@ -124,8 +124,6 @@ namespace CapaPresentacion
                     MessageBox.Show(mensaje);
                 }   
             }
-
-            
         }
 
         private void Limpiar()
@@ -220,6 +218,7 @@ namespace CapaPresentacion
                     if(respuesta)
                     {
                         dataGridViewData.Rows.RemoveAt(Convert.ToInt32(textBoxIndice.Text)); //Elimina la fila del DataGridView
+                        Limpiar();
                     } 
                     else
                     {
@@ -256,6 +255,11 @@ namespace CapaPresentacion
             {
                 row.Visible = true;
             }
+        }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }
