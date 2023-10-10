@@ -174,8 +174,6 @@ namespace CapaPresentacion
                     textBoxCorreo.Text = dataGridViewData.Rows[indice].Cells["Correo"].Value.ToString();
                     textBoxClave.Text = dataGridViewData.Rows[indice].Cells["Clave"].Value.ToString();
                     textBoxConfirmarClave.Text = dataGridViewData.Rows[indice].Cells["Clave"].Value.ToString();
-                    //comboBoxRol.SelectedValue = dataGridViewData.Rows[indice].Cells["idRol"].Value.ToString();
-                    //comboBoxEstado.SelectedValue = dataGridViewData.Rows[indice].Cells["estado"].Value.ToString();
 
                     foreach (OpcionCombo oc in comboBoxRol.Items)
                     {

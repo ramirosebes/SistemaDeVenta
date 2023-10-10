@@ -356,3 +356,13 @@ begin
 		set @Respuesta = 1
 	end
 end
+
+select IdProducto, Codigo, Nombre, p.Descripcion, c.IdCategoria, c.Descripcion[DescripcionCategoria], Stock, PrecioCompra, PrecioVenta, p.Estado from PRODUCTO p
+inner join CATEGORIA c on c.IdCategoria = p.IdCategoria
+
+select * from PRODUCTO;
+
+select * from CATEGORIA;
+
+insert into PRODUCTO(Codigo, Nombre, Descripcion, IdCategoria)
+values ('101010', 'Wanda 800 Clear VHS', '1L', 3);
