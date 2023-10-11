@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxIndice = new System.Windows.Forms.TextBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
+            this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
@@ -58,18 +70,7 @@
             this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelPanelIzquierda = new System.Windows.Forms.Label();
-            this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,15 +86,15 @@
             // dataGridViewData
             // 
             this.dataGridViewData.AllowUserToAddRows = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buttonSeleccionar,
@@ -112,19 +113,100 @@
             this.dataGridViewData.MultiSelect = false;
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewData.RowTemplate.Height = 28;
-            this.dataGridViewData.Size = new System.Drawing.Size(840, 509);
+            this.dataGridViewData.Size = new System.Drawing.Size(840, 473);
             this.dataGridViewData.TabIndex = 75;
             this.dataGridViewData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellContentClick);
             this.dataGridViewData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewData_CellPainting);
+            // 
+            // buttonSeleccionar
+            // 
+            this.buttonSeleccionar.HeaderText = "";
+            this.buttonSeleccionar.Name = "buttonSeleccionar";
+            this.buttonSeleccionar.ReadOnly = true;
+            this.buttonSeleccionar.Width = 30;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 76;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 130;
+            // 
+            // IdCategoria
+            // 
+            this.IdCategoria.HeaderText = "IdCategoria";
+            this.IdCategoria.Name = "IdCategoria";
+            this.IdCategoria.ReadOnly = true;
+            this.IdCategoria.Visible = false;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 80;
+            // 
+            // PrecioCompra
+            // 
+            this.PrecioCompra.HeaderText = "Precio Compra";
+            this.PrecioCompra.Name = "PrecioCompra";
+            this.PrecioCompra.ReadOnly = true;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "Precio Venta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 60;
             // 
             // label2
             // 
@@ -426,92 +508,27 @@
             this.labelPanelIzquierda.Size = new System.Drawing.Size(250, 637);
             this.labelPanelIzquierda.TabIndex = 48;
             // 
-            // buttonSeleccionar
+            // buttonExportar
             // 
-            this.buttonSeleccionar.HeaderText = "";
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.ReadOnly = true;
-            this.buttonSeleccionar.Width = 30;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 76;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 130;
-            // 
-            // IdCategoria
-            // 
-            this.IdCategoria.HeaderText = "IdCategoria";
-            this.IdCategoria.Name = "IdCategoria";
-            this.IdCategoria.ReadOnly = true;
-            this.IdCategoria.Visible = false;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 80;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "Precio Compra";
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 60;
+            this.buttonExportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
+            this.buttonExportar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExportar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExportar.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonExportar.Location = new System.Drawing.Point(977, 595);
+            this.buttonExportar.Name = "buttonExportar";
+            this.buttonExportar.Size = new System.Drawing.Size(150, 30);
+            this.buttonExportar.TabIndex = 83;
+            this.buttonExportar.Text = "Descargar Excel";
+            this.buttonExportar.UseVisualStyleBackColor = false;
+            this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
             // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 637);
+            this.Controls.Add(this.buttonExportar);
             this.Controls.Add(this.textBoxIndice);
             this.Controls.Add(this.dataGridViewData);
             this.Controls.Add(this.label2);
@@ -591,5 +608,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button buttonExportar;
     }
 }
