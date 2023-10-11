@@ -59,7 +59,7 @@ namespace CapaPresentacion
                     item.oRol.IdRol,
                     item.oRol.Descripcion,
                     item.Estado == true ? "Activo" : "No activo",
-                    item.Estado == true ? 1 : 0, //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
+                    item.Estado == true ? 1 : 0, //Si lo descomento aparece 1 y 0, probar este arriba o abajo. Tambien causa problemas a la hora de seleccionar un registro por el indice
                 });
             }
         }
@@ -150,12 +150,12 @@ namespace CapaPresentacion
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
-                var w = Properties.Resources.Checkbox1.Width;
-                var h = Properties.Resources.Checkbox1.Height;
+                var w = Properties.Resources.Select1.Width;
+                var h = Properties.Resources.Select1.Height;
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-                e.Graphics.DrawImage(Properties.Resources.Checkbox1, new Rectangle(x, y, w, h));
+                e.Graphics.DrawImage(Properties.Resources.Select1, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
         }

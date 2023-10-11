@@ -45,8 +45,8 @@ namespace CapaPresentacion
             foreach (Cliente item in lista)
             {
                 dataGridViewData.Rows.Add(new object[] {"", item.IdCliente, item.Documento, item.NombreCompleto, item.Correo, item.Telefono,
+                    item.Estado == true ? "Activo" : "No activo",
                     item.Estado == true ? 1 : 0,
-                    item.Estado == true ? "Activo" : "No activo", //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
                 });
             }
         }
@@ -74,7 +74,7 @@ namespace CapaPresentacion
                 {
                     dataGridViewData.Rows.Add(new object[] {"", idGenerado, textBoxDocumento.Text, textBoxNombreCompleto.Text, textBoxCorreo.Text, textBoxTelefono.Text,
                         ((OpcionCombo)comboBoxEstado.SelectedItem).Texto.ToString(),
-                        ((OpcionCombo)comboBoxEstado.SelectedItem).Valor.ToString(), //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
+                        ((OpcionCombo)comboBoxEstado.SelectedItem).Valor.ToString(),
                 });
 
                     Limpiar();
@@ -129,12 +129,12 @@ namespace CapaPresentacion
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
-                var w = Properties.Resources.Checkbox1.Width;
-                var h = Properties.Resources.Checkbox1.Height;
+                var w = Properties.Resources.Select1.Width;
+                var h = Properties.Resources.Select1.Height;
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-                e.Graphics.DrawImage(Properties.Resources.Checkbox1, new Rectangle(x, y, w, h));
+                e.Graphics.DrawImage(Properties.Resources.Select1, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
         }
