@@ -94,7 +94,7 @@ end
 go
 
 ---------- PROCEDIMIENTO ALMACENADO EDITAR USUARIO----------
-CREATE PROC SP_EDITARUSUARIO (
+CREATE PROC SP_MODIFICARUSUARIO (
 	@IdUsuario int,
 	@Documento nvarchar(50),
 	@NombreCompleto nvarchar(100),
@@ -366,3 +366,63 @@ select * from CATEGORIA;
 
 insert into PRODUCTO(Codigo, Nombre, Descripcion, IdCategoria)
 values ('101010', 'Wanda 800 Clear VHS', '1L', 3);
+
+-------------------------------------------------------------------------------- VIDEO 11 --------------------------------------------------------------------------------
+create proc SP_REGISTRARCLIENTE (
+	@Documento nvarchar(50),
+	@NombreCompleto nvarchar(50),
+	@Correo nvarchar(50),
+	@Telefono nvarchar(50),
+	@Estado bit,
+	@Resultado int output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 0
+	declare @IDPERSONA int
+	if not exists (select * from CLIENTE where Documento = @Documento)
+	begin
+		insert into CLIENTE(Documento, NombreCompleto, Correo, Telefono, Estado)
+		values (@Documento, @NombreCompleto, @Correo, @Telefono, @Estado)
+
+		set @Resultado = SCOPE_IDENTITY()
+	end
+	else
+		set @Mensaje = 'El numero de documento ya existe'
+end
+
+go
+
+create proc SP_MODIFICARCLIENTE (
+	@IdCliente int,
+	@Documento nvarchar(50),
+	@NombreCompleto nvarchar(50),
+	@Correo nvarchar(50),
+	@Telefono nvarchar(50),
+	@Estado bit,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	declare @IDPERSONA int
+	if not exists (select * from CLIENTE where Documento = @Documento and IdCliente != @IdCliente)
+	begin
+		update CLIENTE set
+		Documento = @Documento,
+		NombreCompleto = @NombreCompleto,
+		Correo = @Correo,
+		Telefono = @Telefono,
+		Estado = @Estado
+		where IdCliente = @IdCliente
+	end
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'El numero de documento ya existe'
+	end
+end
+
+select IdCliente, Documento, NombreCompleto, Correo, Telefono, Estado from CLIENTE;

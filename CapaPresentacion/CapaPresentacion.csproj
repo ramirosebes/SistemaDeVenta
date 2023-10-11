@@ -273,19 +273,34 @@
     <None Include="Resources\Checkboc1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Broom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom2.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Checkbox1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Checkbox2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Lupa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select2.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Trashcan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Broom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Broom1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

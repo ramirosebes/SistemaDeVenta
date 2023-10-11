@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CapaPresentacion.Utilidades;
 using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Utilidades;
 
 namespace CapaPresentacion
 {
@@ -68,7 +68,7 @@ namespace CapaPresentacion
         {
             string mensaje = string.Empty;
 
-            Usuario objUsuario = new Usuario()
+            Usuario obj = new Usuario()
             {
                 IdUsuario = Convert.ToInt32(textBoxID.Text),
                 Documento = textBoxDocumento.Text,
@@ -79,18 +79,18 @@ namespace CapaPresentacion
                 Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
-            if (objUsuario.IdUsuario == 0) //Si es un usuario nuevo
+            if (obj.IdUsuario == 0) //Si es un usuario nuevo
             {
-                int idUsuarioGenerado = new CN_Usuario().Registrar(objUsuario, out mensaje);
+                int idGenerado = new CN_Usuario().Registrar(obj, out mensaje);
 
 
-                if (idUsuarioGenerado != 0)
+                if (idGenerado != 0)
                 {
-                    dataGridViewData.Rows.Add(new object[] {"", idUsuarioGenerado, textBoxDocumento.Text, textBoxNombreCompleto.Text, textBoxCorreo.Text, textBoxClave.Text,
-                    ((OpcionCombo)comboBoxRol.SelectedItem).Valor.ToString(),
-                    ((OpcionCombo)comboBoxRol.SelectedItem).Texto.ToString(),
-                    ((OpcionCombo)comboBoxEstado.SelectedItem).Texto.ToString(),
-                    ((OpcionCombo)comboBoxEstado.SelectedItem).Valor.ToString(), //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
+                    dataGridViewData.Rows.Add(new object[] {"", idGenerado, textBoxDocumento.Text, textBoxNombreCompleto.Text, textBoxCorreo.Text, textBoxClave.Text,
+                        ((OpcionCombo)comboBoxRol.SelectedItem).Valor.ToString(),
+                        ((OpcionCombo)comboBoxRol.SelectedItem).Texto.ToString(),
+                        ((OpcionCombo)comboBoxEstado.SelectedItem).Texto.ToString(),
+                        ((OpcionCombo)comboBoxEstado.SelectedItem).Valor.ToString(), //Si lo descomento aparece 1 y 0, ESTE TIENE QUE ESTAR ABAJO
                 });
 
                     Limpiar();
@@ -102,7 +102,7 @@ namespace CapaPresentacion
             }
             else //Si es un usuario ya registrado
             {
-                bool resultado = new CN_Usuario().Editar(objUsuario, out mensaje);
+                bool resultado = new CN_Usuario().Editar(obj, out mensaje);
 
                 if (resultado)
                 {

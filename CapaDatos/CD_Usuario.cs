@@ -62,7 +62,6 @@ namespace CapaDatos
             int idUsuarioGenerado = 0;
             Mensaje = string.Empty;
 
-
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
@@ -103,12 +102,11 @@ namespace CapaDatos
             bool respuesta = false;
             Mensaje = string.Empty;
 
-
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
-                    SqlCommand cmd = new SqlCommand("SP_EDITARUSUARIO", oconexion);
+                    SqlCommand cmd = new SqlCommand("SP_MODIFICARUSUARIO", oconexion);
                     //Parametros de entrada
                     cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
                     cmd.Parameters.AddWithValue("Documento", obj.Documento);
@@ -145,7 +143,6 @@ namespace CapaDatos
         {
             bool respuesta = false;
             Mensaje = string.Empty;
-
 
             try
             {

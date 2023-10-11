@@ -62,7 +62,6 @@ namespace CapaDatos
             int idProductoGenerado = 0;
             Mensaje = string.Empty;
 
-
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
@@ -100,7 +99,6 @@ namespace CapaDatos
         {
             bool respuesta = false;
             Mensaje = string.Empty;
-
 
             try
             {
@@ -140,7 +138,6 @@ namespace CapaDatos
         {
             bool respuesta = false;
             Mensaje = string.Empty;
-
 
             try
             {
