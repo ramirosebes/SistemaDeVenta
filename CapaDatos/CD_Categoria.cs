@@ -49,7 +49,7 @@ namespace CapaDatos
             return lista;
         }
 
-        public int Registrar(Categoria obj/*Parametro de entrada*/, out string Mensaje/*Parametro de salida*/)
+        public int Registrar(Categoria obj, out string Mensaje)
         {
             int idCategoriaGenerado = 0;
             Mensaje = string.Empty;
@@ -83,7 +83,7 @@ namespace CapaDatos
             return idCategoriaGenerado;
         }
 
-        public bool Editar(Categoria obj/*Parametro de entrada*/, out string Mensaje/*Parametro de salida*/)
+        public bool Editar(Categoria obj, out string Mensaje)
         {
             bool respuesta = false;
             Mensaje = string.Empty;
@@ -118,7 +118,7 @@ namespace CapaDatos
             return respuesta;
         }
 
-        public bool Eliminar(Categoria obj/*Parametro de entrada*/, out string Mensaje/*Parametro de salida*/)
+        public bool Eliminar(Categoria obj, out string Mensaje)
         {
             bool respuesta = false;
             Mensaje = string.Empty;

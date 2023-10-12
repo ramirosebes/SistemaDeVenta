@@ -426,3 +426,86 @@ begin
 end
 
 select IdCliente, Documento, NombreCompleto, Correo, Telefono, Estado from CLIENTE;
+
+-------------------------------------------------------------------------------- VIDEO 12 --------------------------------------------------------------------------------
+create proc SP_REGISTRARPROVEEDOR (
+	@Documento nvarchar(50),
+	@RazonSocial nvarchar(50),
+	@Correo nvarchar(50),
+	@Telefono nvarchar(50),
+	@Estado bit,
+	@Resultado int output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 0
+	declare @IDPERSONA int
+	if not exists (select * from PROVEEDOR where Documento = @Documento)
+	begin
+		insert into PROVEEDOR (Documento, RazonSocial, Correo, Telefono, Estado)
+		values (@Documento, @RazonSocial, @Correo, @Telefono, @Estado)
+
+		set @Resultado = SCOPE_IDENTITY()
+	end
+	else
+		set @Mensaje = 'El numero de documento ya existe'
+end
+
+go
+
+create proc SP_MODIFICARPROVEEDOR (
+	@IdProveedor int,
+	@Documento nvarchar(50),
+	@RazonSocial nvarchar(50),
+	@Correo nvarchar(50),
+	@Telefono nvarchar(50),
+	@Estado bit,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	declare @IDPERSONA int
+	if not exists (select * from PROVEEDOR where Documento = @Documento and IdProveedor != @IdProveedor)
+	begin
+		update PROVEEDOR set
+		Documento = @Documento,
+		RazonSocial = @RazonSocial,
+		Correo = @Correo,
+		Telefono = @Telefono,
+		Estado = @Estado
+		where IdProveedor = @IdProveedor
+	end
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'El numero de documento ya existe'
+	end
+end
+
+go
+
+create proc SP_ELIMINARPROVEEDOR (
+	@IdProveedor int,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	if not exists (
+	select * from PROVEEDOR p
+	inner join COMPRA c on p.IdProveedor = c.IdProveedor
+	where p.IdProveedor = @IdProveedor
+	)
+	begin
+		delete top(1) from PROVEEDOR where IdProveedor = @IdProveedor
+	end
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'El proveedor se encuentra relacionado a una compra'
+	end
+end

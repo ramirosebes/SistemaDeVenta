@@ -1,4 +1,4 @@
-1--create database DB_SERVICIO_DE_COLOR;
+--create database DB_SERVICIO_DE_COLOR;
 --use DB_SERVICIO_DE_COLOR;
 
 create table ROL (
