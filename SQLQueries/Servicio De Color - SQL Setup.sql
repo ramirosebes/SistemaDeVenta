@@ -109,6 +109,14 @@ create table DETALLE_VENTA (
 	FechaRegistro datetime default getdate(),
 );
 
+create table NEGOCIO (
+	IdNegocio int primary key,
+	Nombre nvarchar(60),
+	RUC nvarchar(60),
+	Direccion nvarchar(60),
+	Logo varbinary(max) NULL,
+);
+
 insert into ROL (descripcion) values('ADMINISTRADOR');
 insert into ROL (descripcion) values('EMPLEADO');
 insert into USUARIO(documento,	nombreCompleto, correo, clave, idRol) values('101010', 'ADMIN', '@GMAIL.COM', '123', 1);

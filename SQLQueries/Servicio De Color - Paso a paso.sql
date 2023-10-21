@@ -509,3 +509,22 @@ begin
 		set @Mensaje = 'El proveedor se encuentra relacionado a una compra'
 	end
 end
+
+-------------------------------------------------------------------------------- VIDEO 13 --------------------------------------------------------------------------------
+create table NEGOCIO (
+	IdNegocio int primary key,
+	Nombre nvarchar(60),
+	RUC nvarchar(60),
+	Direccion nvarchar(60),
+	Logo varbinary(max) NULL,
+);
+
+insert into NEGOCIO (IdNegocio, Nombre, RUC, Direccion) values (1, 'Servicio De Color', '101010', 'Gaboto 2060');
+
+select IdNegocio, Nombre, RUC, Direccion from NEGOCIO where IdNegocio = 1;
+
+select Logo from NEGOCIO where IdNegocio = 1;
+
+select * from NEGOCIO;
+
+select Logo from NEGOCIO where IdNegocio = 1;

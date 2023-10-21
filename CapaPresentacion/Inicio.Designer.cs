@@ -49,6 +49,7 @@
             this.labelTitulo = new System.Windows.Forms.Label();
             this.labelUsuarioTitulo = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
+            this.subMenuNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,7 +99,8 @@
             this.menuMantenedor.AutoSize = false;
             this.menuMantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuCategoria,
-            this.subMenuProducto});
+            this.subMenuProducto,
+            this.subMenuNegocio});
             this.menuMantenedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMantenedor.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuMantenedor.Name = "menuMantenedor";
@@ -110,7 +112,7 @@
             // 
             this.subMenuCategoria.ForeColor = System.Drawing.SystemColors.ControlText;
             this.subMenuCategoria.Name = "subMenuCategoria";
-            this.subMenuCategoria.Size = new System.Drawing.Size(141, 28);
+            this.subMenuCategoria.Size = new System.Drawing.Size(180, 28);
             this.subMenuCategoria.Text = "Categoria";
             this.subMenuCategoria.Click += new System.EventHandler(this.subMenuCategoria_Click);
             // 
@@ -118,7 +120,7 @@
             // 
             this.subMenuProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.subMenuProducto.Name = "subMenuProducto";
-            this.subMenuProducto.Size = new System.Drawing.Size(141, 28);
+            this.subMenuProducto.Size = new System.Drawing.Size(180, 28);
             this.subMenuProducto.Text = "Producto";
             this.subMenuProducto.Click += new System.EventHandler(this.subMenuProducto_Click);
             // 
@@ -263,6 +265,13 @@
             this.labelUsuario.TabIndex = 7;
             this.labelUsuario.Text = "labelUsuario";
             // 
+            // subMenuNegocio
+            // 
+            this.subMenuNegocio.Name = "subMenuNegocio";
+            this.subMenuNegocio.Size = new System.Drawing.Size(180, 28);
+            this.subMenuNegocio.Text = "Negocio";
+            this.subMenuNegocio.Click += new System.EventHandler(this.subMenuNegocio_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,6 +317,7 @@
         private System.Windows.Forms.ToolStripMenuItem subMenuVerDetalleVenta;
         private System.Windows.Forms.ToolStripMenuItem subMenuRegistrarCompra;
         private System.Windows.Forms.ToolStripMenuItem subMenuVerDetalleCompra;
+        private System.Windows.Forms.ToolStripMenuItem subMenuNegocio;
     }
 }
 
