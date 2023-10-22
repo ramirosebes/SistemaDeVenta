@@ -51,7 +51,6 @@ namespace CapaPresentacion
             comboBoxBusqueda.ValueMember = "Valor";
             comboBoxBusqueda.SelectedIndex = 0;
 
-            //Mostrar todos los usuarios
             List<Producto> lista = new CN_Producto().Listar();
 
             foreach (Producto item in lista)
@@ -87,7 +86,7 @@ namespace CapaPresentacion
                 Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
-            if (obj.IdProducto == 0) //Si es nuevo
+            if (obj.IdProducto == 0)
             {
                 int idGenerado = new CN_Producto().Registrar(obj, out mensaje);
 
@@ -116,13 +115,12 @@ namespace CapaPresentacion
                     MessageBox.Show(mensaje);
                 }
             }
-            else //Si es ya esta registrado
+            else
             {
                 bool resultado = new CN_Producto().Editar(obj, out mensaje);
 
                 if (resultado)
                 {
-                    //Una vez que se guarde se actualiza en el DataGridView
                     DataGridViewRow row = dataGridViewData.Rows[Convert.ToInt32(textBoxIndice.Text)];
                     row.Cells["Id"].Value = textBoxID.Text;
                     row.Cells["Codigo"].Value = textBoxCodigo.Text;
@@ -248,11 +246,11 @@ namespace CapaPresentacion
                 {
                     if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(textBoxBusqueda.Text.Trim().ToUpper()))
                     {
-                        row.Visible = true; //Muestra las filas
+                        row.Visible = true;
                     }
                     else
                     {
-                        row.Visible = false; //Oculta las filas
+                        row.Visible = false;
                     }
                 }
             }

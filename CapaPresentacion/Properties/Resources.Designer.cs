@@ -83,6 +83,36 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Broom3 {
+            get {
+                object obj = ResourceManager.GetObject("Broom3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Broom31 {
+            get {
+                object obj = ResourceManager.GetObject("Broom31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Broom32 {
+            get {
+                object obj = ResourceManager.GetObject("Broom32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Checkbox1 {
             get {
                 object obj = ResourceManager.GetObject("Checkbox1", resourceCulture);
@@ -113,9 +143,39 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Search {
+        internal static System.Drawing.Bitmap Lupa2 {
             get {
-                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                object obj = ResourceManager.GetObject("Lupa2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lupa21 {
+            get {
+                object obj = ResourceManager.GetObject("Lupa21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lupa22 {
+            get {
+                object obj = ResourceManager.GetObject("Lupa22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lupa23 {
+            get {
+                object obj = ResourceManager.GetObject("Lupa23", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

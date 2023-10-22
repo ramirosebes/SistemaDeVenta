@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelRol = new System.Windows.Forms.Label();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
@@ -70,9 +71,9 @@
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxIndice = new System.Windows.Forms.TextBox();
+            this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +91,7 @@
             // 
             // comboBoxRol
             // 
+            this.comboBoxRol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRol.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRol.FormattingEnabled = true;
@@ -101,6 +103,7 @@
             // 
             // comboBoxEstado
             // 
+            this.comboBoxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEstado.FormattingEnabled = true;
@@ -372,18 +375,26 @@
             this.Rol,
             this.Estado,
             this.EstadoValor});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewData.Location = new System.Drawing.Point(287, 116);
             this.dataGridViewData.MultiSelect = false;
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewData.RowTemplate.Height = 28;
             this.dataGridViewData.Size = new System.Drawing.Size(840, 509);
             this.dataGridViewData.TabIndex = 34;
@@ -485,7 +496,7 @@
             this.labelBuscarPor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelBuscarPor.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscarPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelBuscarPor.Location = new System.Drawing.Point(551, 53);
+            this.labelBuscarPor.Location = new System.Drawing.Point(606, 53);
             this.labelBuscarPor.Name = "labelBuscarPor";
             this.labelBuscarPor.Size = new System.Drawing.Size(69, 19);
             this.labelBuscarPor.TabIndex = 41;
@@ -493,11 +504,12 @@
             // 
             // comboBoxBusqueda
             // 
+            this.comboBoxBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBusqueda.FormattingEnabled = true;
             this.comboBoxBusqueda.ItemHeight = 19;
-            this.comboBoxBusqueda.Location = new System.Drawing.Point(626, 50);
+            this.comboBoxBusqueda.Location = new System.Drawing.Point(681, 50);
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(174, 27);
             this.comboBoxBusqueda.TabIndex = 42;
@@ -508,31 +520,16 @@
             this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxBusqueda.Location = new System.Drawing.Point(806, 50);
+            this.textBoxBusqueda.Location = new System.Drawing.Point(861, 50);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(175, 20);
             this.textBoxBusqueda.TabIndex = 12;
-            // 
-            // buttonLimpiarBuscardor
-            // 
-            this.buttonLimpiarBuscardor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.buttonLimpiarBuscardor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonLimpiarBuscardor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLimpiarBuscardor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLimpiarBuscardor.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(1055, 50);
-            this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
-            this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(62, 30);
-            this.buttonLimpiarBuscardor.TabIndex = 14;
-            this.buttonLimpiarBuscardor.Text = "Limpiar";
-            this.buttonLimpiarBuscardor.UseVisualStyleBackColor = false;
-            this.buttonLimpiarBuscardor.Click += new System.EventHandler(this.buttonLimpiarBuscardor_Click);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label1.Location = new System.Drawing.Point(806, 79);
+            this.label1.Location = new System.Drawing.Point(861, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 1);
             this.label1.TabIndex = 46;
@@ -547,6 +544,21 @@
             this.textBoxIndice.Text = "-1";
             this.textBoxIndice.Visible = false;
             // 
+            // buttonLimpiarBuscardor
+            // 
+            this.buttonLimpiarBuscardor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonLimpiarBuscardor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLimpiarBuscardor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLimpiarBuscardor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLimpiarBuscardor.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonLimpiarBuscardor.Image = global::CapaPresentacion.Properties.Resources.Broom31;
+            this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(1083, 50);
+            this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
+            this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(35, 30);
+            this.buttonLimpiarBuscardor.TabIndex = 14;
+            this.buttonLimpiarBuscardor.UseVisualStyleBackColor = false;
+            this.buttonLimpiarBuscardor.Click += new System.EventHandler(this.buttonLimpiarBuscardor_Click);
+            // 
             // buttonBuscar
             // 
             this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
@@ -554,11 +566,11 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Location = new System.Drawing.Point(987, 50);
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa21;
+            this.buttonBuscar.Location = new System.Drawing.Point(1042, 50);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(62, 30);
+            this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
             this.buttonBuscar.TabIndex = 13;
-            this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 

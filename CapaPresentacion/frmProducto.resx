@@ -153,4 +153,16 @@
   <metadata name="Estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonLimpiarBuscardor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
+        IgAALiIBquLdkgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEMSURBVDhPxdIx
+        S0JhGMXxaypFICaSRIJjm5ANOjYZOTgJ1dTk3ORQ2CdoDBfB5j6CSzQ3tgoOIs0lZlPh9f/Y0TcRJSHo
+        wG94zvs+itfr/Ut8388jrnG1sHiITxRVjcsIUhoXhjtb6KCLddXTT61onAl9EMfYwT0sVzp2oTzDLTZU
+        jcNcheUDQwywrWMXymdYsqqs28MmLvEGyyuOdMWF8gDnCGANtmQP6wH7sJ9QxxcetTYbDkIo4Ak/Y0t3
+        2EUaJ1r5DkUUNbxgWfq4RkirLpQJNGDftixtBLU2Hw5juIE9ccs7mpjMF7q6OFwKo4wSkpj8Qy24F+g3
+        YeEUPdh7kFO9WliMI6PxL+N5I7D9hB9MLJgtAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
