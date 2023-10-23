@@ -614,6 +614,8 @@
             this.Controls.Add(this.comboBoxRol);
             this.Controls.Add(this.labelRol);
             this.Controls.Add(this.labelPanelIzquierda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);

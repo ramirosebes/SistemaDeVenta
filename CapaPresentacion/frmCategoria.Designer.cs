@@ -390,6 +390,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBoxEstado);
             this.Controls.Add(this.labelPanelIzquierda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmCategoria";
             this.Text = "frmCategoria";
             this.Load += new System.EventHandler(this.frmCategoria_Load);

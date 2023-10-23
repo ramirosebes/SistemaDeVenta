@@ -528,3 +528,73 @@ select Logo from NEGOCIO where IdNegocio = 1;
 select * from NEGOCIO;
 
 select Logo from NEGOCIO where IdNegocio = 1;
+
+-------------------------------------------------------------------------------- VIDEO 15 --------------------------------------------------------------------------------
+create type [dbo].[EDetalle_Compra] as table (
+	[IdProducto] int NULL,
+	[PrecioCompra] decimal(18,2) NULL,
+	[PrecioVenta] decimal(18,2) NULL,
+	[Cantidad] int NULL,
+	[MontoTotal] decimal(18,2) NULL
+);
+
+--Codigo estudiandote lo definio originalmente como EDetalle_Compra
+EXEC sp_rename '[dbo].[EDetalle_Compra]', 'EDETALLE_COMPRA'; --Permite cambiarle el nombre
+
+go
+
+create procedure SP_REGISTRARCOMPRA (
+	@IdUsuario int,
+	@IdProveedor int,
+	@TipoDocumento nvarchar(500),
+	@NumeroDocumento nvarchar(500),
+	@MontoTotal decimal(18,2),
+	@DetalleCompra [EDETALLE_COMPRA] readonly,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	begin try
+
+		declare @IdCompra int = 0
+		set @Resultado = 1
+		set @Mensaje = ''
+
+		begin transaction registro
+
+			insert into COMPRA(IdUsuario, IdProveedor, TipoDocumento,NumeroDocumento,MontoTotal)
+			values (@IdUsuario, @IdProveedor, @TipoDocumento, @NumeroDocumento, @MontoTotal)
+
+			set @IdCompra = SCOPE_IDENTITY()
+
+			insert into DETALLE_COMPRA(IdCompra, IdProducto, PrecioCompra, PrecioVenta, Cantidad, MontoTotal)
+			select @IdCompra, IdProducto, PrecioCompra, PrecioVenta, Cantidad, MontoTotal from @DetalleCompra
+
+			update p set p.Stock = p.Stock + dc.Cantidad,
+			p.PrecioCompra = dc.PrecioCompra,
+			p.PrecioVenta = dc.PrecioVenta
+			from PRODUCTO p
+			inner join @DetalleCompra dc on dc.IdProducto = p.IdProducto
+
+		commit transaction registro
+
+	end try
+	begin catch
+
+		set @Resultado = 0
+		set @Mensaje = ERROR_MESSAGE()
+
+		rollback transaction registro
+
+	end catch
+
+end
+
+-------------------------------------------------------------------------------- VIDEO 16 --------------------------------------------------------------------------------
+select count(*) + 1 from COMPRA;
+
+select * from COMPRA where NumeroDocumento = '00001';
+select * from DETALLE_COMPRA where IdCompra = 1;
+
+-------------------------------------------------------------------------------- VIDEO 17 --------------------------------------------------------------------------------

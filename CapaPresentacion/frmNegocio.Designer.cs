@@ -33,8 +33,7 @@
             this.labelPanelIzquierda = new System.Windows.Forms.Label();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonSubir = new System.Windows.Forms.Button();
+            this.buttonGuardarCambios = new System.Windows.Forms.Button();
             this.labelDireccion = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelLineDireccion = new System.Windows.Forms.Label();
@@ -44,7 +43,8 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.labelLineNombre = new System.Windows.Forms.Label();
-            this.buttonGuardarCambios = new System.Windows.Forms.Button();
+            this.buttonSubir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -102,29 +102,19 @@
             this.groupBox.TabIndex = 36;
             this.groupBox.TabStop = false;
             // 
-            // label1
+            // buttonGuardarCambios
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Logo:";
-            // 
-            // buttonSubir
-            // 
-            this.buttonSubir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.buttonSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSubir.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSubir.Location = new System.Drawing.Point(10, 207);
-            this.buttonSubir.Name = "buttonSubir";
-            this.buttonSubir.Size = new System.Drawing.Size(150, 29);
-            this.buttonSubir.TabIndex = 2;
-            this.buttonSubir.Text = "Subir";
-            this.buttonSubir.UseVisualStyleBackColor = false;
-            this.buttonSubir.Click += new System.EventHandler(this.buttonSubir_Click);
+            this.buttonGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.buttonGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuardarCambios.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardarCambios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonGuardarCambios.Location = new System.Drawing.Point(248, 207);
+            this.buttonGuardarCambios.Name = "buttonGuardarCambios";
+            this.buttonGuardarCambios.Size = new System.Drawing.Size(200, 30);
+            this.buttonGuardarCambios.TabIndex = 36;
+            this.buttonGuardarCambios.Text = "Guardar cambios";
+            this.buttonGuardarCambios.UseVisualStyleBackColor = false;
+            this.buttonGuardarCambios.Click += new System.EventHandler(this.buttonGuardarCambios_Click);
             // 
             // labelDireccion
             // 
@@ -222,19 +212,29 @@
             this.labelLineNombre.TabIndex = 30;
             this.labelLineNombre.Text = "label2";
             // 
-            // buttonGuardarCambios
+            // buttonSubir
             // 
-            this.buttonGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.buttonGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGuardarCambios.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGuardarCambios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonGuardarCambios.Location = new System.Drawing.Point(248, 207);
-            this.buttonGuardarCambios.Name = "buttonGuardarCambios";
-            this.buttonGuardarCambios.Size = new System.Drawing.Size(200, 30);
-            this.buttonGuardarCambios.TabIndex = 36;
-            this.buttonGuardarCambios.Text = "Guardar cambios";
-            this.buttonGuardarCambios.UseVisualStyleBackColor = false;
-            this.buttonGuardarCambios.Click += new System.EventHandler(this.buttonGuardarCambios_Click);
+            this.buttonSubir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.buttonSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSubir.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSubir.Location = new System.Drawing.Point(10, 207);
+            this.buttonSubir.Name = "buttonSubir";
+            this.buttonSubir.Size = new System.Drawing.Size(150, 29);
+            this.buttonSubir.TabIndex = 2;
+            this.buttonSubir.Text = "Subir";
+            this.buttonSubir.UseVisualStyleBackColor = false;
+            this.buttonSubir.Click += new System.EventHandler(this.buttonSubir_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Logo:";
             // 
             // pictureBoxLogo
             // 
@@ -255,6 +255,8 @@
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.labelPanelIzquierda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmNegocio";
             this.Text = "frmNegocio";
             this.Load += new System.EventHandler(this.frmNegocio_Load);

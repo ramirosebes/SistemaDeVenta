@@ -14,6 +14,7 @@ namespace CapaPresentacion
         [STAThread]
         static void Main()
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-PE"); //es-AR para que tome . como decimal y no la ,
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Inicio()); //Application.Run(new Login()); se cambio para entrar mas rapido

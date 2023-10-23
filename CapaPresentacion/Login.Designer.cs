@@ -199,7 +199,7 @@
             this.Controls.Add(this.textBoxDocumento);
             this.Controls.Add(this.labelLineDocumento);
             this.Controls.Add(this.labelTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";

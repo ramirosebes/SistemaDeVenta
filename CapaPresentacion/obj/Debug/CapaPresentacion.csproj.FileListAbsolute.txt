@@ -106,3 +106,7 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPres
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmNegocio.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdProveedor.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdProducto.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\BouncyCastle.Crypto.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\itextsharp.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\itextsharp.xmlworker.dll
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\itextsharp.xml

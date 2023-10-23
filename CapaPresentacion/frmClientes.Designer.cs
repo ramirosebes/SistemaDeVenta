@@ -529,6 +529,8 @@
             this.Controls.Add(this.labelEstado);
             this.Controls.Add(this.comboBoxEstado);
             this.Controls.Add(this.labelPanelIzquierda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmClientes";
             this.Text = "frmClientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
