@@ -671,3 +671,58 @@ begin
 	end catch
 end
 
+create proc SP_REPORTECOMPRAS (
+	@FechaIncio nvarchar(10),
+	@FechaFin nvarchar(10),
+	@IdProveedor int
+)
+as
+begin
+	set dateformat dmy;
+
+	select
+	convert(char(10), c.FechaRegistro,103)[FechaRegistro], c.TipoDocumento, c.NumeroDocumento, c.MontoTotal,
+	u.NombreCompleto[UsuarioRegistro],
+	pr.Documento[DocumentoProveedor], pr.RazonSocial,
+	p.Codigo[CodigoProducto], p.Nombre[NombreProducto], 
+	ca.Descripcion[Categoria], 
+	dc.PrecioCompra, dc.PrecioVenta, dc.Cantidad, dc.MontoTotal[SubTotal]
+	from COMPRA c
+	inner join USUARIO u on u.IdUsuario = c.IdUsuario
+	inner join PROVEEDOR pr on pr.IdProveedor = c.IdProveedor
+	inner join DETALLE_COMPRA dc on dc.IdCompra = c.IdCompra
+	inner join PRODUCTO p on p.IdProducto = dc.IdProducto
+	inner join CATEGORIA ca on ca.IdCategoria = p.IdCategoria
+	where convert(date, c.FechaRegistro, 103) between @FechaIncio and @FechaFin
+	and pr.IdProveedor = iif(@IdProveedor = 0, pr.IdProveedor, @IdProveedor)
+
+	set dateformat mdy;
+end
+
+go
+
+create proc SP_REPORTEVENTAS (
+	@FechaIncio nvarchar(10),
+	@FechaFin nvarchar(10)
+)
+as
+begin
+	set dateformat dmy;
+
+	select
+	convert(char(10), v.FechaRegistro,103)[FechaRegistro], v.TipoDocumento, v.NumeroDocumento, v.MontoTotal,
+	u.NombreCompleto[UsuarioRegistro],
+	v.DocumentoCliente, v.NombreCliente,
+	p.Codigo[CodigoProducto], p.Nombre[NombreProducto], 
+	ca.Descripcion[Categoria], 
+	dv.PrecioVenta, dv.Cantidad, dv.SubTotal
+	from VENTA v
+	inner join USUARIO u on u.IdUsuario = v.IdUsuario
+	inner join DETALLE_VENTA dv on dv.IdVenta = v.IdVenta
+	inner join PRODUCTO p on p.IdProducto = dv.IdProducto
+	inner join CATEGORIA ca on ca.IdCategoria = p.IdCategoria
+	where convert(date, v.FechaRegistro, 103) between @FechaIncio and @FechaFin
+
+	set dateformat mdy;
+end
+
