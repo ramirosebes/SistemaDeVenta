@@ -213,20 +213,21 @@
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 76;
+            this.Codigo.Width = 150;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
+            this.Nombre.Width = 175;
             // 
             // Categoria
             // 
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
+            this.Categoria.Width = 175;
             // 
             // Stock
             // 

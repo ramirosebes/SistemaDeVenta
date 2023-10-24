@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using CapaEntidad;
-using CapaPresentacion.Utilidades;
 using CapaPresentacion.Modales;
 using CapaNegocio;
+using CapaPresentacion.Utilidades;
 
 namespace CapaPresentacion
 {
@@ -48,7 +48,7 @@ namespace CapaPresentacion
                 {
                     textBoxIdProveedor.Text = modal._Proveedor.IdProveedor.ToString();
                     textBoxDocumentoProveedor.Text = modal._Proveedor.Documento;
-                    textBoxNombreProveedor.Text = modal._Proveedor.RazonSocial; //Cambiar textboxNombreProveedor por textboxRazonSocialProveedor
+                    textBoxRazonSocial.Text = modal._Proveedor.RazonSocial; //textBoxNombreProveedor
                 }
                 else
                 {
@@ -391,7 +391,7 @@ namespace CapaPresentacion
 
                 textBoxIdProveedor.Text = "0";
                 textBoxDocumentoProveedor.Clear();
-                textBoxNombreProveedor.Clear();
+                textBoxRazonSocial.Clear();
                 dataGridViewData.Rows.Clear();
                 calcularTotal();
             }

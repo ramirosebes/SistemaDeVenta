@@ -110,3 +110,4 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPres
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\itextsharp.dll
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\itextsharp.xmlworker.dll
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\bin\Debug\itextsharp.xml
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdCliente.resources

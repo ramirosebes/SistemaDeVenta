@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.Modales
 {
-    partial class mdProveedor
+    partial class mdCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -31,44 +31,33 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelProveedor = new System.Windows.Forms.Panel();
-            this.labelTitulo = new System.Windows.Forms.Label();
+            this.panelCliente = new System.Windows.Forms.Panel();
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.buttonBuscar = new System.Windows.Forms.Button();
             this.labelBuscarPor = new System.Windows.Forms.Label();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelProveedor.SuspendLayout();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelProveedor
+            // panelCliente
             // 
-            this.panelProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelProveedor.Controls.Add(this.labelTitulo);
-            this.panelProveedor.Controls.Add(this.buttonLimpiarBuscardor);
-            this.panelProveedor.Controls.Add(this.textBoxBusqueda);
-            this.panelProveedor.Controls.Add(this.buttonBuscar);
-            this.panelProveedor.Controls.Add(this.labelBuscarPor);
-            this.panelProveedor.Controls.Add(this.comboBoxBusqueda);
-            this.panelProveedor.Location = new System.Drawing.Point(12, 12);
-            this.panelProveedor.Name = "panelProveedor";
-            this.panelProveedor.Size = new System.Drawing.Size(543, 97);
-            this.panelProveedor.TabIndex = 0;
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(13, 10);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(205, 33);
-            this.labelTitulo.TabIndex = 0;
-            this.labelTitulo.Text = "Lista de proveedores:";
+            this.panelCliente.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelCliente.Controls.Add(this.buttonLimpiarBuscardor);
+            this.panelCliente.Controls.Add(this.labelBuscarPor);
+            this.panelCliente.Controls.Add(this.buttonBuscar);
+            this.panelCliente.Controls.Add(this.textBoxBusqueda);
+            this.panelCliente.Controls.Add(this.labelTitulo);
+            this.panelCliente.Controls.Add(this.comboBoxBusqueda);
+            this.panelCliente.Location = new System.Drawing.Point(12, 12);
+            this.panelCliente.Name = "panelCliente";
+            this.panelCliente.Size = new System.Drawing.Size(543, 97);
+            this.panelCliente.TabIndex = 0;
             // 
             // buttonLimpiarBuscardor
             // 
@@ -81,20 +70,21 @@
             this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(492, 50);
             this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
             this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(35, 30);
-            this.buttonLimpiarBuscardor.TabIndex = 49;
+            this.buttonLimpiarBuscardor.TabIndex = 54;
             this.buttonLimpiarBuscardor.UseVisualStyleBackColor = false;
             this.buttonLimpiarBuscardor.Click += new System.EventHandler(this.buttonLimpiarBuscardor_Click);
             // 
-            // textBoxBusqueda
+            // labelBuscarPor
             // 
-            this.textBoxBusqueda.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxBusqueda.Location = new System.Drawing.Point(270, 50);
-            this.textBoxBusqueda.Name = "textBoxBusqueda";
-            this.textBoxBusqueda.Size = new System.Drawing.Size(175, 27);
-            this.textBoxBusqueda.TabIndex = 47;
+            this.labelBuscarPor.AutoSize = true;
+            this.labelBuscarPor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelBuscarPor.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBuscarPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelBuscarPor.Location = new System.Drawing.Point(15, 53);
+            this.labelBuscarPor.Name = "labelBuscarPor";
+            this.labelBuscarPor.Size = new System.Drawing.Size(69, 19);
+            this.labelBuscarPor.TabIndex = 51;
+            this.labelBuscarPor.Text = "Buscar por:";
             // 
             // buttonBuscar
             // 
@@ -107,21 +97,30 @@
             this.buttonBuscar.Location = new System.Drawing.Point(451, 50);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
-            this.buttonBuscar.TabIndex = 48;
+            this.buttonBuscar.TabIndex = 53;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
-            // labelBuscarPor
+            // textBoxBusqueda
             // 
-            this.labelBuscarPor.AutoSize = true;
-            this.labelBuscarPor.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelBuscarPor.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBuscarPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelBuscarPor.Location = new System.Drawing.Point(15, 53);
-            this.labelBuscarPor.Name = "labelBuscarPor";
-            this.labelBuscarPor.Size = new System.Drawing.Size(69, 19);
-            this.labelBuscarPor.TabIndex = 50;
-            this.labelBuscarPor.Text = "Buscar por:";
+            this.textBoxBusqueda.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxBusqueda.Location = new System.Drawing.Point(270, 50);
+            this.textBoxBusqueda.Name = "textBoxBusqueda";
+            this.textBoxBusqueda.Size = new System.Drawing.Size(175, 27);
+            this.textBoxBusqueda.TabIndex = 52;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Location = new System.Drawing.Point(13, 10);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(166, 33);
+            this.labelTitulo.TabIndex = 1;
+            this.labelTitulo.Text = "Lista de clientes:";
             // 
             // comboBoxBusqueda
             // 
@@ -133,7 +132,7 @@
             this.comboBoxBusqueda.Location = new System.Drawing.Point(90, 50);
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(174, 27);
-            this.comboBoxBusqueda.TabIndex = 51;
+            this.comboBoxBusqueda.TabIndex = 55;
             // 
             // dataGridViewData
             // 
@@ -149,9 +148,8 @@
             this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
             this.Documento,
-            this.RazonSocial});
+            this.NombreCompleto});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,15 +175,8 @@
             this.dataGridViewData.RowTemplate.Height = 28;
             this.dataGridViewData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewData.Size = new System.Drawing.Size(543, 377);
-            this.dataGridViewData.TabIndex = 53;
-            this.dataGridViewData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellDoubleClick_1);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.dataGridViewData.TabIndex = 54;
+            this.dataGridViewData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellDoubleClick);
             // 
             // Documento
             // 
@@ -194,29 +185,27 @@
             this.Documento.ReadOnly = true;
             this.Documento.Width = 150;
             // 
-            // RazonSocial
+            // NombreCompleto
             // 
-            this.RazonSocial.HeaderText = "Razon social";
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            this.RazonSocial.Width = 350;
+            this.NombreCompleto.HeaderText = "Nombre Completo";
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 350;
             // 
-            // mdProveedor
+            // mdCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(569, 504);
             this.Controls.Add(this.dataGridViewData);
-            this.Controls.Add(this.panelProveedor);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "mdProveedor";
+            this.Controls.Add(this.panelCliente);
+            this.Name = "mdCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdProveedor";
-            this.Load += new System.EventHandler(this.mdProveedor_Load);
-            this.panelProveedor.ResumeLayout(false);
-            this.panelProveedor.PerformLayout();
+            this.Text = "mdCliente";
+            this.Load += new System.EventHandler(this.mdCliente_Load);
+            this.panelCliente.ResumeLayout(false);
+            this.panelCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
             this.ResumeLayout(false);
 
@@ -224,16 +213,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelProveedor;
+        private System.Windows.Forms.Panel panelCliente;
         private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.Button buttonLimpiarBuscardor;
-        private System.Windows.Forms.Button buttonBuscar;
-        private System.Windows.Forms.TextBox textBoxBusqueda;
-        private System.Windows.Forms.ComboBox comboBoxBusqueda;
         private System.Windows.Forms.Label labelBuscarPor;
+        private System.Windows.Forms.Button buttonLimpiarBuscardor;
+        private System.Windows.Forms.TextBox textBoxBusqueda;
+        private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.ComboBox comboBoxBusqueda;
         private System.Windows.Forms.DataGridView dataGridViewData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
     }
 }
