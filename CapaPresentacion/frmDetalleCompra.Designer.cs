@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelDetalleCompra = new System.Windows.Forms.Panel();
             this.buttonExportar = new System.Windows.Forms.Button();
             this.textBoxMontoTotal = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.labelNumeroDocumento = new System.Windows.Forms.Label();
-            this.labelRegistrarCompra = new System.Windows.Forms.Label();
+            this.labelDetalleCompra = new System.Windows.Forms.Label();
             this.panelDetalleCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.groupBoxInformacionProveedor.SuspendLayout();
@@ -77,7 +77,7 @@
             this.panelDetalleCompra.Controls.Add(this.textBoxBusqueda);
             this.panelDetalleCompra.Controls.Add(this.buttonBuscar);
             this.panelDetalleCompra.Controls.Add(this.labelNumeroDocumento);
-            this.panelDetalleCompra.Controls.Add(this.labelRegistrarCompra);
+            this.panelDetalleCompra.Controls.Add(this.labelDetalleCompra);
             this.panelDetalleCompra.Location = new System.Drawing.Point(169, 12);
             this.panelDetalleCompra.Name = "panelDetalleCompra";
             this.panelDetalleCompra.Size = new System.Drawing.Size(835, 613);
@@ -111,39 +111,39 @@
             // dataGridViewData
             // 
             this.dataGridViewData.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Producto,
             this.PrecioCompra,
             this.Cantidad,
             this.SubTotal});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewData.Location = new System.Drawing.Point(19, 277);
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewData.Size = new System.Drawing.Size(798, 293);
             this.dataGridViewData.TabIndex = 60;
             // 
@@ -366,15 +366,15 @@
             this.labelNumeroDocumento.TabIndex = 56;
             this.labelNumeroDocumento.Text = "Numero de documento:";
             // 
-            // labelRegistrarCompra
+            // labelDetalleCompra
             // 
-            this.labelRegistrarCompra.AutoSize = true;
-            this.labelRegistrarCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistrarCompra.Location = new System.Drawing.Point(13, 12);
-            this.labelRegistrarCompra.Name = "labelRegistrarCompra";
-            this.labelRegistrarCompra.Size = new System.Drawing.Size(178, 33);
-            this.labelRegistrarCompra.TabIndex = 1;
-            this.labelRegistrarCompra.Text = "Detalle de compra";
+            this.labelDetalleCompra.AutoSize = true;
+            this.labelDetalleCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDetalleCompra.Location = new System.Drawing.Point(13, 12);
+            this.labelDetalleCompra.Name = "labelDetalleCompra";
+            this.labelDetalleCompra.Size = new System.Drawing.Size(178, 33);
+            this.labelDetalleCompra.TabIndex = 1;
+            this.labelDetalleCompra.Text = "Detalle de compra";
             // 
             // frmDetalleCompra
             // 
@@ -387,6 +387,7 @@
             this.MaximizeBox = false;
             this.Name = "frmDetalleCompra";
             this.Text = "frmDetalleCompra";
+            this.Load += new System.EventHandler(this.frmDetalleCompra_Load);
             this.panelDetalleCompra.ResumeLayout(false);
             this.panelDetalleCompra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
@@ -401,7 +402,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelDetalleCompra;
-        private System.Windows.Forms.Label labelRegistrarCompra;
+        private System.Windows.Forms.Label labelDetalleCompra;
         private System.Windows.Forms.Button buttonLimpiarBuscardor;
         private System.Windows.Forms.TextBox textBoxBusqueda;
         private System.Windows.Forms.Button buttonBuscar;

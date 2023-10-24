@@ -598,3 +598,84 @@ select * from COMPRA where NumeroDocumento = '00001';
 select * from DETALLE_COMPRA where IdCompra = 1;
 
 -------------------------------------------------------------------------------- VIDEO 17 --------------------------------------------------------------------------------
+select c.IdCompra,
+u.NombreCompleto,
+pr.Documento, pr.RazonSocial,
+c.TipoDocumento, c.NumeroDocumento, c.MontoTotal, convert(char(10),c.FechaRegistro,103)[FechaRegistro]
+from COMPRA c
+inner join USUARIO u on u.IdUsuario = c.IdUsuario
+inner join PROVEEDOR pr on pr.IdProveedor = c.IdProveedor
+where c.NumeroDocumento = '00001'
+
+select p.Nombre,
+dc.PrecioCompra, dc.Cantidad, dc.MontoTotal
+from DETALLE_COMPRA dc
+inner join PRODUCTO p on p.IdProducto = dc.IdProducto
+where dc.IdCompra = 1
+
+-------------------------------------------------------------------------------- VIDEO 19 --------------------------------------------------------------------------------
+create type [dbo].[EDETALLE_VENTA] as table (
+	[IdProducto] int NULL,
+	[PrecioVenta] decimal(18,2) NULL,
+	[Cantidad] int NULL,
+	[SubTotal] decimal(18,2) NULL
+);
+
+create procedure SP_REGISTRARVENTA (
+	@IdUsuario int,
+	@TipoDocumento nvarchar(500),
+	@NumeroDocumento nvarchar(500),
+	@DocumentoCliente nvarchar(500),
+	@NombreCliente nvarchar(500),
+	@MontoPago decimal(18,2),
+	@MontoCambio decimal(18,2),
+	@MontoTotal decimal(18,2),
+	@DetalleVenta [EDETALLE_VENTA] readonly,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	begin try
+		declare @IdVenta int = 0
+		set @Resultado = 1
+		set @Mensaje = ''
+
+		begin transaction registro
+
+			insert into VENTA(IdUsuario, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal)
+			values (@IdUsuario, @TipoDocumento, @NumeroDocumento, @DocumentoCliente, @NombreCliente, @MontoPago, @MontoCambio, @MontoTotal)
+
+			set @IdVenta = SCOPE_IDENTITY()
+
+			insert into DETALLE_VENTA(IdVenta, IdProducto, PrecioVenta, Cantidad, SubTotal)
+			select @IdVenta, IdProducto, PrecioVenta, Cantidad, SubTotal from @DetalleVenta
+
+		commit transaction registro
+		
+	end try
+	begin catch
+			set @Resultado = 0
+			set @Mensaje = ERROR_MESSAGE()
+			rollback transaction registro
+	end catch
+end
+
+select count(*) + 1 from VENTA
+
+select * from VENTA where NumeroDocumento = '00001';
+select * from DETALLE_VENTA where IdVenta = 1;
+
+-------------------------------------------------------------------------------- VIDEO 20 --------------------------------------------------------------------------------
+select v.IdVenta, u.NombreCompleto,
+v.DocumentoCliente, v.NombreCliente,
+v.TipoDocumento, v.NumeroDocumento,
+v.MontoPago, v.MontoCambio, v.MontoTotal,
+convert(char(10),v.FechaRegistro,103)[FechaRegistro]
+from VENTA v
+inner join USUARIO u on u.IdUsuario = v.IdUsuario
+where v.NumeroDocumento = '00001'
+
+select p.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal from DETALLE_VENTA dv
+inner join PRODUCTO p on p.IdProducto = dv.IdProducto
+where dv.IdVenta = 1

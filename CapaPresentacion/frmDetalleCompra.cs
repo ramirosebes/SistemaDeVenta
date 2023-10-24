@@ -22,6 +22,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+        private void frmDetalleCompra_Load(object sender, EventArgs e)
+        {
+            textBoxBusqueda.Select();
+        }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
@@ -51,6 +55,7 @@ namespace CapaPresentacion
             textBoxFecha.Clear();
             textBoxTipoDocumento.Clear();
             textBoxUsuario.Clear();
+
             textBoxDocumentoProveedor.Clear();
             textBoxRazonSocial.Clear();
 

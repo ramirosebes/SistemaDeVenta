@@ -55,7 +55,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("NumeroDocumento", obj.NumeroDocumento);
                     cmd.Parameters.AddWithValue("MontoTotal", obj.MontoTotal);
                     cmd.Parameters.AddWithValue("DetalleCompra", DetalleCompra);
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output; //SqlDbType.Int
                     cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -96,7 +96,7 @@ namespace CapaDatos
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.Parameters.AddWithValue("@numero", numero);
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = System.Data.CommandType.Text;
 
                     oconexion.Open();
 
@@ -146,7 +146,7 @@ namespace CapaDatos
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.Parameters.AddWithValue("@IdCompra", idCompra);
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = System.Data.CommandType.Text;
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
