@@ -177,9 +177,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label1.Location = new System.Drawing.Point(20, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 25);
+            this.label1.Size = new System.Drawing.Size(106, 25);
             this.label1.TabIndex = 24;
-            this.label1.Text = "LOGIN";
+            this.label1.Text = "Iniciar sesión";
             // 
             // Login
             // 

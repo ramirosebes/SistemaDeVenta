@@ -168,5 +168,43 @@ namespace CapaPresentacion
                 row.Visible = true;
             }
         }
+
+        private void buttonLimpiarProveedor_Click(object sender, EventArgs e)
+        {
+            int idProveedor = Convert.ToInt32(((OpcionCombo)comboBoxProveedor.SelectedItem).Valor.ToString());
+
+            comboBoxProveedor.SelectedIndex = 0;
+
+            List<ReporteCompra> lista = new List<ReporteCompra>();
+
+            lista = new CN_Reporte().Compra(
+                dateTimePickerFechaInicio.Value.ToString(),
+                dateTimePickerFechaFin.Value.ToString(),
+                idProveedor
+                );
+
+            dataGridViewData.Rows.Clear();
+
+            foreach (ReporteCompra rc in lista)
+            {
+                dataGridViewData.Rows.Add(new object[]
+                {
+                    rc.FechaRegistro,
+                    rc.TipoDocumento,
+                    rc.NumeroDocumento,
+                    rc.MontoTotal,
+                    rc.UsuarioRegistro,
+                    rc.DocumentoProveedor,
+                    rc.RazonSocial,
+                    rc.CodigoProducto,
+                    rc.NombreProducto,
+                    rc.Categoria,
+                    rc.PrecioCompra,
+                    rc.PrecioVenta,
+                    rc.Cantidad,
+                    rc.SubTotal
+                });
+            }
+        }
     }
 }

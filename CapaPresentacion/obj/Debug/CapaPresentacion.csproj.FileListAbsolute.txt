@@ -113,3 +113,4 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPres
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdCliente.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteCompras.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteVentas.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdAcercaDe.resources

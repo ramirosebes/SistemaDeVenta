@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Modales;
 
 namespace CapaPresentacion
 {
@@ -22,15 +22,15 @@ namespace CapaPresentacion
         public Inicio(Usuario objUsuario = null)
         {
             //Permite registrarse con un usuario nulo para no estar poniendo las credenciales todo el tiempo
-            if (objUsuario == null)
-            {
-                usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
-            } else
-            {
-                usuarioActual = objUsuario;
-            }
+            //if (objUsuario == null)
+            //{
+            //    usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
+            //} else
+            //{
+            //    usuarioActual = objUsuario;
+            //}
 
-            //usuarioActual = objUsuario;
+            usuarioActual = objUsuario;
             InitializeComponent();
         }
 
@@ -142,6 +142,20 @@ namespace CapaPresentacion
         private void subMenuReporteVentas_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuReportes, new frmReporteVentas());
+        }
+
+        private void menuAcercaDe_Click(object sender, EventArgs e)
+        {
+            mdAcercaDe md = new mdAcercaDe();
+            md.ShowDialog();
+        }
+
+        private void buttonCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "Mensaje", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

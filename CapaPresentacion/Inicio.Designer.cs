@@ -52,6 +52,7 @@
             this.labelTitulo = new System.Windows.Forms.Label();
             this.labelUsuarioTitulo = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
+            this.buttonCerrarSesion = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -245,6 +246,7 @@
             this.menuAcercaDe.Size = new System.Drawing.Size(100, 30);
             this.menuAcercaDe.Text = "Acerca de";
             this.menuAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuAcercaDe.Click += new System.EventHandler(this.menuAcercaDe_Click);
             // 
             // contenedor
             // 
@@ -272,7 +274,7 @@
             this.labelUsuarioTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelUsuarioTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuarioTitulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuarioTitulo.Location = new System.Drawing.Point(911, 26);
+            this.labelUsuarioTitulo.Location = new System.Drawing.Point(629, 26);
             this.labelUsuarioTitulo.Name = "labelUsuarioTitulo";
             this.labelUsuarioTitulo.Size = new System.Drawing.Size(53, 19);
             this.labelUsuarioTitulo.TabIndex = 6;
@@ -284,17 +286,34 @@
             this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuario.Location = new System.Drawing.Point(959, 26);
+            this.labelUsuario.Location = new System.Drawing.Point(677, 26);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(77, 19);
             this.labelUsuario.TabIndex = 7;
             this.labelUsuario.Text = "labelUsuario";
+            // 
+            // buttonCerrarSesion
+            // 
+            this.buttonCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCerrarSesion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCerrarSesion.Location = new System.Drawing.Point(1054, 20);
+            this.buttonCerrarSesion.Name = "buttonCerrarSesion";
+            this.buttonCerrarSesion.Size = new System.Drawing.Size(92, 30);
+            this.buttonCerrarSesion.TabIndex = 84;
+            this.buttonCerrarSesion.Text = "Cerrar sesion";
+            this.buttonCerrarSesion.UseVisualStyleBackColor = false;
+            this.buttonCerrarSesion.Click += new System.EventHandler(this.buttonCerrarSesion_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1158, 733);
+            this.Controls.Add(this.buttonCerrarSesion);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.labelUsuarioTitulo);
             this.Controls.Add(this.labelTitulo);
@@ -340,6 +359,7 @@
         private System.Windows.Forms.ToolStripMenuItem subMenuNegocio;
         private System.Windows.Forms.ToolStripMenuItem subMenuReporteCompras;
         private System.Windows.Forms.ToolStripMenuItem subMenuReporteVentas;
+        private System.Windows.Forms.Button buttonCerrarSesion;
     }
 }
 

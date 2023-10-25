@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelReporteCompras = new System.Windows.Forms.Panel();
             this.comboBoxProveedor = new System.Windows.Forms.ComboBox();
-            this.buttonLimpiarProveedor = new System.Windows.Forms.Button();
             this.buttonBuscarResultado = new System.Windows.Forms.Button();
             this.labelProveedor = new System.Windows.Forms.Label();
             this.labelFechaFin = new System.Windows.Forms.Label();
@@ -72,7 +71,6 @@
             // 
             this.panelReporteCompras.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelReporteCompras.Controls.Add(this.comboBoxProveedor);
-            this.panelReporteCompras.Controls.Add(this.buttonLimpiarProveedor);
             this.panelReporteCompras.Controls.Add(this.buttonBuscarResultado);
             this.panelReporteCompras.Controls.Add(this.labelProveedor);
             this.panelReporteCompras.Controls.Add(this.labelFechaFin);
@@ -89,26 +87,10 @@
             // 
             this.comboBoxProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProveedor.FormattingEnabled = true;
-            this.comboBoxProveedor.Location = new System.Drawing.Point(756, 50);
+            this.comboBoxProveedor.Location = new System.Drawing.Point(837, 50);
             this.comboBoxProveedor.Name = "comboBoxProveedor";
             this.comboBoxProveedor.Size = new System.Drawing.Size(200, 27);
             this.comboBoxProveedor.TabIndex = 92;
-            // 
-            // buttonLimpiarProveedor
-            // 
-            this.buttonLimpiarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.buttonLimpiarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonLimpiarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLimpiarProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLimpiarProveedor.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonLimpiarProveedor.Image = global::CapaPresentacion.Properties.Resources.Broom31;
-            this.buttonLimpiarProveedor.Location = new System.Drawing.Point(1043, 47);
-            this.buttonLimpiarProveedor.Name = "buttonLimpiarProveedor";
-            this.buttonLimpiarProveedor.Size = new System.Drawing.Size(75, 30);
-            this.buttonLimpiarProveedor.TabIndex = 84;
-            this.buttonLimpiarProveedor.Text = "Limpiar";
-            this.buttonLimpiarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonLimpiarProveedor.UseVisualStyleBackColor = false;
             // 
             // buttonBuscarResultado
             // 
@@ -118,7 +100,7 @@
             this.buttonBuscarResultado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarResultado.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonBuscarResultado.Image = global::CapaPresentacion.Properties.Resources.Lupa21;
-            this.buttonBuscarResultado.Location = new System.Drawing.Point(962, 47);
+            this.buttonBuscarResultado.Location = new System.Drawing.Point(1043, 47);
             this.buttonBuscarResultado.Name = "buttonBuscarResultado";
             this.buttonBuscarResultado.Size = new System.Drawing.Size(75, 30);
             this.buttonBuscarResultado.TabIndex = 83;
@@ -133,7 +115,7 @@
             this.labelProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelProveedor.Location = new System.Drawing.Point(686, 53);
+            this.labelProveedor.Location = new System.Drawing.Point(767, 53);
             this.labelProveedor.Name = "labelProveedor";
             this.labelProveedor.Size = new System.Drawing.Size(64, 19);
             this.labelProveedor.TabIndex = 85;
@@ -197,14 +179,14 @@
             // 
             this.dataGridViewData.AllowUserToAddRows = false;
             this.dataGridViewData.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaRegistro,
@@ -221,14 +203,14 @@
             this.PrecioVenta,
             this.Cantidad,
             this.SubTotal});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewData.Location = new System.Drawing.Point(15, 75);
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
@@ -454,7 +436,6 @@
         private System.Windows.Forms.Label labelFechaInicio;
         private System.Windows.Forms.Label labelFechaFin;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFin;
-        private System.Windows.Forms.Button buttonLimpiarProveedor;
         private System.Windows.Forms.Button buttonBuscarResultado;
         private System.Windows.Forms.Label labelProveedor;
         private System.Windows.Forms.DataGridView dataGridViewData;
