@@ -34,6 +34,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoria));
             this.textBoxIndice = new System.Windows.Forms.TextBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
+            this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
@@ -52,11 +57,6 @@
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.labelPanelIzquierda = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
-            this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +113,41 @@
             this.dataGridViewData.TabIndex = 75;
             this.dataGridViewData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellContentClick);
             this.dataGridViewData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewData_CellPainting);
+            // 
+            // buttonSeleccionar
+            // 
+            this.buttonSeleccionar.HeaderText = "";
+            this.buttonSeleccionar.Name = "buttonSeleccionar";
+            this.buttonSeleccionar.ReadOnly = true;
+            this.buttonSeleccionar.Width = 30;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 567;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 200;
             // 
             // label2
             // 
@@ -322,48 +357,13 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa22;
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscar.Location = new System.Drawing.Point(1042, 50);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
             this.buttonBuscar.TabIndex = 60;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
-            // 
-            // buttonSeleccionar
-            // 
-            this.buttonSeleccionar.HeaderText = "";
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.ReadOnly = true;
-            this.buttonSeleccionar.Width = 30;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 567;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 200;
             // 
             // frmCategoria
             // 
@@ -392,6 +392,7 @@
             this.Controls.Add(this.comboBoxEstado);
             this.Controls.Add(this.labelPanelIzquierda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmCategoria";
             this.Text = "frmCategoria";

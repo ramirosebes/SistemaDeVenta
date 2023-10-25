@@ -413,5 +413,11 @@
   <ItemGroup>
     <None Include="Resources\PlantillaVenta.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CerrarSesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CerrarSesion1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

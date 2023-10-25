@@ -261,7 +261,7 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa2;
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscar.Location = new System.Drawing.Point(1042, 50);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
@@ -572,6 +572,7 @@
             this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.labelPanelIzquierda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmProducto";
             this.Text = "frmProducto";

@@ -63,9 +63,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Broom1 {
+        internal static System.Drawing.Bitmap CerrarSesion {
             get {
-                object obj = ResourceManager.GetObject("Broom1", resourceCulture);
+                object obj = ResourceManager.GetObject("CerrarSesion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Broom2 {
+        internal static System.Drawing.Bitmap Escoba {
             get {
-                object obj = ResourceManager.GetObject("Broom2", resourceCulture);
+                object obj = ResourceManager.GetObject("Escoba", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Broom3 {
+        internal static System.Drawing.Bitmap Flecha {
             get {
-                object obj = ResourceManager.GetObject("Broom3", resourceCulture);
+                object obj = ResourceManager.GetObject("Flecha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Broom31 {
+        internal static System.Drawing.Bitmap Lupa {
             get {
-                object obj = ResourceManager.GetObject("Broom31", resourceCulture);
+                object obj = ResourceManager.GetObject("Lupa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,79 +103,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Broom32 {
+        internal static System.Drawing.Bitmap Papelera {
             get {
-                object obj = ResourceManager.GetObject("Broom32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Checkbox1 {
-            get {
-                object obj = ResourceManager.GetObject("Checkbox1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Checkbox2 {
-            get {
-                object obj = ResourceManager.GetObject("Checkbox2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Lupa1 {
-            get {
-                object obj = ResourceManager.GetObject("Lupa1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Lupa2 {
-            get {
-                object obj = ResourceManager.GetObject("Lupa2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Lupa21 {
-            get {
-                object obj = ResourceManager.GetObject("Lupa21", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Lupa22 {
-            get {
-                object obj = ResourceManager.GetObject("Lupa22", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Lupa23 {
-            get {
-                object obj = ResourceManager.GetObject("Lupa23", resourceCulture);
+                object obj = ResourceManager.GetObject("Papelera", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -241,56 +171,6 @@ namespace CapaPresentacion.Properties {
         internal static string PlantillaVenta {
             get {
                 return ResourceManager.GetString("PlantillaVenta", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Select1 {
-            get {
-                object obj = ResourceManager.GetObject("Select1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Select2 {
-            get {
-                object obj = ResourceManager.GetObject("Select2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Select3 {
-            get {
-                object obj = ResourceManager.GetObject("Select3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Trashcan {
-            get {
-                object obj = ResourceManager.GetObject("Trashcan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Trashcan2 {
-            get {
-                object obj = ResourceManager.GetObject("Trashcan2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

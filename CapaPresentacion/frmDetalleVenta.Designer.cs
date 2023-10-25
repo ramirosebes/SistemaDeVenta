@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetalleVenta));
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -53,15 +54,15 @@
             this.buttonExportar = new System.Windows.Forms.Button();
             this.textBoxMontoTotal = new System.Windows.Forms.TextBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDetalleVenta = new System.Windows.Forms.Panel();
             this.textBoxMontoCambio = new System.Windows.Forms.TextBox();
             this.labelMontoCambio = new System.Windows.Forms.Label();
             this.textBoxMontoPago = new System.Windows.Forms.TextBox();
             this.labelMontoPago = new System.Windows.Forms.Label();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxInformacionVenta.SuspendLayout();
             this.groupBoxInformacionCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
@@ -75,7 +76,7 @@
             this.buttonLimpiarBuscardor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLimpiarBuscardor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLimpiarBuscardor.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonLimpiarBuscardor.Image = global::CapaPresentacion.Properties.Resources.Broom31;
+            this.buttonLimpiarBuscardor.Image = global::CapaPresentacion.Properties.Resources.Escoba;
             this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(742, 57);
             this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
             this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(75, 30);
@@ -103,7 +104,7 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa21;
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscar.Location = new System.Drawing.Point(661, 57);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 30);
@@ -333,6 +334,34 @@
             this.dataGridViewData.Size = new System.Drawing.Size(798, 293);
             this.dataGridViewData.TabIndex = 60;
             // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 305;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "Precio Venta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            this.PrecioVenta.Width = 150;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 150;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "Sub Total";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Width = 150;
+            // 
             // panelDetalleVenta
             // 
             this.panelDetalleVenta.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -396,34 +425,6 @@
             this.labelMontoPago.TabIndex = 86;
             this.labelMontoPago.Text = "Monto pago:";
             // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 305;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            this.PrecioVenta.Width = 150;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 150;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "Sub Total";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 150;
-            // 
             // frmDetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,6 +433,7 @@
             this.ClientSize = new System.Drawing.Size(1157, 637);
             this.Controls.Add(this.panelDetalleVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmDetalleVenta";
             this.Text = "frmDetalleVenta";

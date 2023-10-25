@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientes));
             this.textBoxIndice = new System.Windows.Forms.TextBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -471,7 +472,7 @@
             this.buttonLimpiarBuscardor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLimpiarBuscardor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLimpiarBuscardor.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonLimpiarBuscardor.Image = global::CapaPresentacion.Properties.Resources.Broom32;
+            this.buttonLimpiarBuscardor.Image = global::CapaPresentacion.Properties.Resources.Escoba;
             this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(1083, 50);
             this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
             this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(35, 30);
@@ -486,7 +487,7 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa23;
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscar.Location = new System.Drawing.Point(1042, 50);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
@@ -530,6 +531,7 @@
             this.Controls.Add(this.comboBoxEstado);
             this.Controls.Add(this.labelPanelIzquierda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmClientes";
             this.Text = "frmClientes";

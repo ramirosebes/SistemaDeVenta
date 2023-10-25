@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteCompras));
             this.panelReporteCompras = new System.Windows.Forms.Panel();
             this.comboBoxProveedor = new System.Windows.Forms.ComboBox();
             this.buttonBuscarResultado = new System.Windows.Forms.Button();
@@ -99,7 +100,7 @@
             this.buttonBuscarResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarResultado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarResultado.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscarResultado.Image = global::CapaPresentacion.Properties.Resources.Lupa21;
+            this.buttonBuscarResultado.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscarResultado.Location = new System.Drawing.Point(1043, 47);
             this.buttonBuscarResultado.Name = "buttonBuscarResultado";
             this.buttonBuscarResultado.Size = new System.Drawing.Size(75, 30);
@@ -358,7 +359,7 @@
             this.buttonLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLimpiarBuscador.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLimpiarBuscador.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonLimpiarBuscador.Image = global::CapaPresentacion.Properties.Resources.Broom31;
+            this.buttonLimpiarBuscador.Image = global::CapaPresentacion.Properties.Resources.Escoba;
             this.buttonLimpiarBuscador.Location = new System.Drawing.Point(575, 39);
             this.buttonLimpiarBuscador.Name = "buttonLimpiarBuscador";
             this.buttonLimpiarBuscador.Size = new System.Drawing.Size(75, 30);
@@ -398,7 +399,7 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa21;
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscar.Location = new System.Drawing.Point(494, 39);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 30);
@@ -416,6 +417,7 @@
             this.ClientSize = new System.Drawing.Size(1157, 637);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelReporteCompras);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReporteCompras";
             this.Text = "frmReporteCompras";
             this.Load += new System.EventHandler(this.frmReporteCompras_Load);

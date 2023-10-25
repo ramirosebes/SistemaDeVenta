@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.panelVentas = new System.Windows.Forms.Panel();
             this.textBoxTotalAPagar = new System.Windows.Forms.TextBox();
             this.labelTotalAPagar = new System.Windows.Forms.Label();
@@ -371,7 +372,7 @@
             this.buttonBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarProducto.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarProducto.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscarProducto.Image = global::CapaPresentacion.Properties.Resources.Lupa2;
+            this.buttonBuscarProducto.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscarProducto.Location = new System.Drawing.Point(166, 45);
             this.buttonBuscarProducto.Name = "buttonBuscarProducto";
             this.buttonBuscarProducto.Size = new System.Drawing.Size(35, 27);
@@ -441,7 +442,7 @@
             this.buttonBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarCliente.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscarCliente.Image = global::CapaPresentacion.Properties.Resources.Lupa2;
+            this.buttonBuscarCliente.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscarCliente.Location = new System.Drawing.Point(166, 45);
             this.buttonBuscarCliente.Name = "buttonBuscarCliente";
             this.buttonBuscarCliente.Size = new System.Drawing.Size(35, 27);
@@ -540,6 +541,7 @@
             this.ClientSize = new System.Drawing.Size(1157, 637);
             this.Controls.Add(this.panelVentas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmVentas";
             this.Text = "frmVentas";

@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.labelRol = new System.Windows.Forms.Label();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
@@ -56,15 +57,6 @@
             this.labelLineConfirmarClave = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.labelBuscarPor = new System.Windows.Forms.Label();
-            this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxIndice = new System.Windows.Forms.TextBox();
-            this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
-            this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +67,15 @@
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.labelBuscarPor = new System.Windows.Forms.Label();
+            this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxIndice = new System.Windows.Forms.TextBox();
+            this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -402,6 +403,74 @@
             this.dataGridViewData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellContentClick);
             this.dataGridViewData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewData_CellPainting);
             // 
+            // buttonSeleccionar
+            // 
+            this.buttonSeleccionar.HeaderText = "";
+            this.buttonSeleccionar.Name = "buttonSeleccionar";
+            this.buttonSeleccionar.ReadOnly = true;
+            this.buttonSeleccionar.Width = 30;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "IdUsuario";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Documento
+            // 
+            this.Documento.HeaderText = "Nro documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            this.Documento.Width = 167;
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "Nombre completo";
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 200;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 200;
+            // 
+            // Clave
+            // 
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
+            this.Clave.ReadOnly = true;
+            this.Clave.Visible = false;
+            // 
+            // IdRol
+            // 
+            this.IdRol.HeaderText = "IdRol";
+            this.IdRol.Name = "IdRol";
+            this.IdRol.ReadOnly = true;
+            this.IdRol.Visible = false;
+            // 
+            // Rol
+            // 
+            this.Rol.HeaderText = "Rol";
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -484,7 +553,7 @@
             this.buttonLimpiarBuscardor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLimpiarBuscardor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLimpiarBuscardor.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonLimpiarBuscardor.Image = global::CapaPresentacion.Properties.Resources.Broom31;
+            this.buttonLimpiarBuscardor.Image = global::CapaPresentacion.Properties.Resources.Escoba;
             this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(1083, 50);
             this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
             this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(35, 30);
@@ -499,81 +568,13 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa21;
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscar.Location = new System.Drawing.Point(1042, 50);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
             this.buttonBuscar.TabIndex = 13;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
-            // 
-            // buttonSeleccionar
-            // 
-            this.buttonSeleccionar.HeaderText = "";
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.ReadOnly = true;
-            this.buttonSeleccionar.Width = 30;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "IdUsuario";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Documento
-            // 
-            this.Documento.HeaderText = "Nro documento";
-            this.Documento.Name = "Documento";
-            this.Documento.ReadOnly = true;
-            this.Documento.Width = 167;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "Nombre completo";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 200;
-            // 
-            // Correo
-            // 
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            this.Correo.Width = 200;
-            // 
-            // Clave
-            // 
-            this.Clave.HeaderText = "Clave";
-            this.Clave.Name = "Clave";
-            this.Clave.ReadOnly = true;
-            this.Clave.Visible = false;
-            // 
-            // IdRol
-            // 
-            this.IdRol.HeaderText = "IdRol";
-            this.IdRol.Name = "IdRol";
-            this.IdRol.ReadOnly = true;
-            this.IdRol.Visible = false;
-            // 
-            // Rol
-            // 
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            this.Rol.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
             // 
             // frmUsuarios
             // 
@@ -616,6 +617,7 @@
             this.Controls.Add(this.labelRol);
             this.Controls.Add(this.labelPanelIzquierda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";

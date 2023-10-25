@@ -210,12 +210,12 @@ namespace CapaPresentacion
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
-                var w = Properties.Resources.Trashcan2.Width;
-                var h = Properties.Resources.Trashcan2.Height;
+                var w = Properties.Resources.Papelera.Width;
+                var h = Properties.Resources.Papelera.Height;
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-                e.Graphics.DrawImage(Properties.Resources.Trashcan2, new Rectangle(x, y, w, h));
+                e.Graphics.DrawImage(Properties.Resources.Papelera, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
         }

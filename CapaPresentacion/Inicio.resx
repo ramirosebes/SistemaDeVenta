@@ -123,10 +123,20 @@
   <metadata name="menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>100, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonCerrarSesion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAEASURBVEhL7ZY5DsJAEASdEZMgJJ7AI+AL5sscIuAQGXzAISkBwdI720i+pB3t+EhcUgWzVveA
+        BZaziVFwzu1gAVPx2Zx1ehi0UrBOD4NmWKeHOTOs08OcGdbpYc4M6/QwZ4Z1AsaZl2M7kuoA1gkY9/AA
+        Vzxq4kNdwDoB4yWcugdc8LhKuG6HdQLGJbzKhbC8+c3DtShf+I44r7mGT+i5w+rycB5lA+vFdds+zAf+
+        OXNlgIcxtrBtWdleFqfe6hf03GDSrY7COgFjZz+uKKwTMJaXDvp3OsEjHPwBMs4jUwVzZlinhzkzrNPD
+        nBnW6UFmtJe93Aclnkba6+1Ef2TZDxcoiYPvdmn0AAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>45</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIABgNwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgEAAAA9ntg7QAAAAFv
