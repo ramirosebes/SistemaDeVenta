@@ -178,6 +178,7 @@
             // dataGridViewData
             // 
             this.dataGridViewData.AllowUserToAddRows = false;
+            this.dataGridViewData.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F);

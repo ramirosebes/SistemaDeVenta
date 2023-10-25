@@ -45,13 +45,13 @@
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProveedores = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuReporteCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuReporteVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.contenedor = new System.Windows.Forms.Panel();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.labelUsuarioTitulo = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
-            this.subMenuReporteCompras = new System.Windows.Forms.ToolStripMenuItem();
-            this.subMenuReporteVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(1168, 60);
+            this.menuTitulo.Size = new System.Drawing.Size(1158, 60);
             this.menuTitulo.TabIndex = 2;
             this.menuTitulo.Text = "menuStrip2";
             // 
@@ -80,7 +80,7 @@
             this.menuAcercaDe});
             this.menu.Location = new System.Drawing.Point(0, 60);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1168, 34);
+            this.menu.Size = new System.Drawing.Size(1158, 34);
             this.menu.TabIndex = 3;
             this.menu.Text = "menuStrip1";
             // 
@@ -114,7 +114,7 @@
             // 
             this.subMenuCategoria.ForeColor = System.Drawing.SystemColors.ControlText;
             this.subMenuCategoria.Name = "subMenuCategoria";
-            this.subMenuCategoria.Size = new System.Drawing.Size(180, 28);
+            this.subMenuCategoria.Size = new System.Drawing.Size(141, 28);
             this.subMenuCategoria.Text = "Categoria";
             this.subMenuCategoria.Click += new System.EventHandler(this.subMenuCategoria_Click);
             // 
@@ -122,14 +122,14 @@
             // 
             this.subMenuProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.subMenuProducto.Name = "subMenuProducto";
-            this.subMenuProducto.Size = new System.Drawing.Size(180, 28);
+            this.subMenuProducto.Size = new System.Drawing.Size(141, 28);
             this.subMenuProducto.Text = "Producto";
             this.subMenuProducto.Click += new System.EventHandler(this.subMenuProducto_Click);
             // 
             // subMenuNegocio
             // 
             this.subMenuNegocio.Name = "subMenuNegocio";
-            this.subMenuNegocio.Size = new System.Drawing.Size(180, 28);
+            this.subMenuNegocio.Size = new System.Drawing.Size(141, 28);
             this.subMenuNegocio.Text = "Negocio";
             this.subMenuNegocio.Click += new System.EventHandler(this.subMenuNegocio_Click);
             // 
@@ -149,14 +149,14 @@
             // subMenuRegistrarVenta
             // 
             this.subMenuRegistrarVenta.Name = "subMenuRegistrarVenta";
-            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(180, 28);
+            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(153, 28);
             this.subMenuRegistrarVenta.Text = "Registrar";
             this.subMenuRegistrarVenta.Click += new System.EventHandler(this.subMenuRegistrarVenta_Click);
             // 
             // subMenuVerDetalleVenta
             // 
             this.subMenuVerDetalleVenta.Name = "subMenuVerDetalleVenta";
-            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(180, 28);
+            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(153, 28);
             this.subMenuVerDetalleVenta.Text = "Ver detalles";
             this.subMenuVerDetalleVenta.Click += new System.EventHandler(this.subMenuVerDetalleVenta_Click);
             // 
@@ -176,14 +176,14 @@
             // subMenuRegistrarCompra
             // 
             this.subMenuRegistrarCompra.Name = "subMenuRegistrarCompra";
-            this.subMenuRegistrarCompra.Size = new System.Drawing.Size(180, 28);
+            this.subMenuRegistrarCompra.Size = new System.Drawing.Size(153, 28);
             this.subMenuRegistrarCompra.Text = "Registrar";
             this.subMenuRegistrarCompra.Click += new System.EventHandler(this.subMenuRegistrarCompra_Click);
             // 
             // subMenuVerDetalleCompra
             // 
             this.subMenuVerDetalleCompra.Name = "subMenuVerDetalleCompra";
-            this.subMenuVerDetalleCompra.Size = new System.Drawing.Size(180, 28);
+            this.subMenuVerDetalleCompra.Size = new System.Drawing.Size(153, 28);
             this.subMenuVerDetalleCompra.Text = "Ver detalles";
             this.subMenuVerDetalleCompra.Click += new System.EventHandler(this.subMenuVerDetalleCompra_Click);
             // 
@@ -222,6 +222,20 @@
             this.menuReportes.Text = "Reportes";
             this.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // subMenuReporteCompras
+            // 
+            this.subMenuReporteCompras.Name = "subMenuReporteCompras";
+            this.subMenuReporteCompras.Size = new System.Drawing.Size(207, 28);
+            this.subMenuReporteCompras.Text = "Reporte de compras";
+            this.subMenuReporteCompras.Click += new System.EventHandler(this.subMenuReporteCompras_Click);
+            // 
+            // subMenuReporteVentas
+            // 
+            this.subMenuReporteVentas.Name = "subMenuReporteVentas";
+            this.subMenuReporteVentas.Size = new System.Drawing.Size(207, 28);
+            this.subMenuReporteVentas.Text = "Reporte de ventas";
+            this.subMenuReporteVentas.Click += new System.EventHandler(this.subMenuReporteVentas_Click);
+            // 
             // menuAcercaDe
             // 
             this.menuAcercaDe.AutoSize = false;
@@ -238,7 +252,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 94);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1168, 639);
+            this.contenedor.Size = new System.Drawing.Size(1158, 639);
             this.contenedor.TabIndex = 4;
             // 
             // labelTitulo
@@ -276,25 +290,11 @@
             this.labelUsuario.TabIndex = 7;
             this.labelUsuario.Text = "labelUsuario";
             // 
-            // subMenuReporteCompras
-            // 
-            this.subMenuReporteCompras.Name = "subMenuReporteCompras";
-            this.subMenuReporteCompras.Size = new System.Drawing.Size(207, 28);
-            this.subMenuReporteCompras.Text = "Reporte de compras";
-            this.subMenuReporteCompras.Click += new System.EventHandler(this.subMenuReporteCompras_Click);
-            // 
-            // subMenuReporteVentas
-            // 
-            this.subMenuReporteVentas.Name = "subMenuReporteVentas";
-            this.subMenuReporteVentas.Size = new System.Drawing.Size(207, 28);
-            this.subMenuReporteVentas.Text = "Reporte de ventas";
-            this.subMenuReporteVentas.Click += new System.EventHandler(this.subMenuReporteVentas_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 733);
+            this.ClientSize = new System.Drawing.Size(1158, 733);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.labelUsuarioTitulo);
             this.Controls.Add(this.labelTitulo);

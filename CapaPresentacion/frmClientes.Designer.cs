@@ -47,7 +47,7 @@
             this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
-            this.labelTitulo2 = new System.Windows.Forms.Label();
+            this.labelTituloCliente = new System.Windows.Forms.Label();
             this.labelTelefono = new System.Windows.Forms.Label();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.labelLineTelefono = new System.Windows.Forms.Label();
@@ -247,17 +247,17 @@
             this.textBoxID.Text = "0";
             this.textBoxID.Visible = false;
             // 
-            // labelTitulo2
+            // labelTituloCliente
             // 
-            this.labelTitulo2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTitulo2.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.labelTitulo2.Location = new System.Drawing.Point(287, 17);
-            this.labelTitulo2.Name = "labelTitulo2";
-            this.labelTitulo2.Size = new System.Drawing.Size(840, 83);
-            this.labelTitulo2.TabIndex = 76;
-            this.labelTitulo2.Text = "Lista de clientes";
-            this.labelTitulo2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTituloCliente.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTituloCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloCliente.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.labelTituloCliente.Location = new System.Drawing.Point(287, 17);
+            this.labelTituloCliente.Name = "labelTituloCliente";
+            this.labelTituloCliente.Size = new System.Drawing.Size(840, 83);
+            this.labelTituloCliente.TabIndex = 76;
+            this.labelTituloCliente.Text = "Lista de clientes";
+            this.labelTituloCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelTelefono
             // 
@@ -510,7 +510,7 @@
             this.Controls.Add(this.comboBoxBusqueda);
             this.Controls.Add(this.labelBuscarPor);
             this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.labelTitulo2);
+            this.Controls.Add(this.labelTituloCliente);
             this.Controls.Add(this.labelTelefono);
             this.Controls.Add(this.textBoxTelefono);
             this.Controls.Add(this.labelLineTelefono);
@@ -552,7 +552,7 @@
         private System.Windows.Forms.ComboBox comboBoxBusqueda;
         private System.Windows.Forms.Label labelBuscarPor;
         private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.Label labelTitulo2;
+        private System.Windows.Forms.Label labelTituloCliente;
         private System.Windows.Forms.Label labelTelefono;
         private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label labelLineTelefono;
