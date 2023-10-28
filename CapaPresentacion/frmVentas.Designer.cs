@@ -108,7 +108,7 @@
             this.textBoxTotalAPagar.Location = new System.Drawing.Point(688, 432);
             this.textBoxTotalAPagar.Name = "textBoxTotalAPagar";
             this.textBoxTotalAPagar.ReadOnly = true;
-            this.textBoxTotalAPagar.Size = new System.Drawing.Size(140, 27);
+            this.textBoxTotalAPagar.Size = new System.Drawing.Size(129, 27);
             this.textBoxTotalAPagar.TabIndex = 22;
             this.textBoxTotalAPagar.Text = "0.00";
             // 
@@ -127,7 +127,7 @@
             this.textBoxPagaCon.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPagaCon.Location = new System.Drawing.Point(688, 484);
             this.textBoxPagaCon.Name = "textBoxPagaCon";
-            this.textBoxPagaCon.Size = new System.Drawing.Size(140, 27);
+            this.textBoxPagaCon.Size = new System.Drawing.Size(129, 27);
             this.textBoxPagaCon.TabIndex = 20;
             this.textBoxPagaCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPagaCon_KeyDown);
             this.textBoxPagaCon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPagaCon_KeyPress);
@@ -151,7 +151,7 @@
             this.buttonRegistrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonRegistrar.Location = new System.Drawing.Point(688, 569);
             this.buttonRegistrar.Name = "buttonRegistrar";
-            this.buttonRegistrar.Size = new System.Drawing.Size(140, 30);
+            this.buttonRegistrar.Size = new System.Drawing.Size(129, 30);
             this.buttonRegistrar.TabIndex = 18;
             this.buttonRegistrar.Text = "Registrar";
             this.buttonRegistrar.UseVisualStyleBackColor = false;
@@ -163,7 +163,7 @@
             this.textBoxCambio.Location = new System.Drawing.Point(688, 536);
             this.textBoxCambio.Name = "textBoxCambio";
             this.textBoxCambio.ReadOnly = true;
-            this.textBoxCambio.Size = new System.Drawing.Size(140, 27);
+            this.textBoxCambio.Size = new System.Drawing.Size(129, 27);
             this.textBoxCambio.TabIndex = 17;
             // 
             // labelCambio

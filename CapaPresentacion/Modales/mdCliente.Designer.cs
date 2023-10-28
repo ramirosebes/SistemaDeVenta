@@ -204,7 +204,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mdCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdCliente";
+            this.Text = "Lista de clientes";
             this.Load += new System.EventHandler(this.mdCliente_Load);
             this.panelCliente.ResumeLayout(false);
             this.panelCliente.PerformLayout();

@@ -34,23 +34,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProveedores));
             this.textBoxIndice = new System.Windows.Forms.TextBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
-            this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelTitulo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
-            this.labelTitulo2 = new System.Windows.Forms.Label();
             this.labelTelefono = new System.Windows.Forms.Label();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.labelLineTelefono = new System.Windows.Forms.Label();
@@ -68,8 +58,19 @@
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.labelEstado = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
-            this.labelPanelIzquierda = new System.Windows.Forms.Label();
+            this.panelDetalleProveedor = new System.Windows.Forms.Panel();
+            this.panelListaProveedores = new System.Windows.Forms.Panel();
+            this.labelListaProveedores = new System.Windows.Forms.Label();
+            this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
+            this.panelListaProveedores.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxIndice
@@ -111,7 +112,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewData.Location = new System.Drawing.Point(287, 116);
+            this.dataGridViewData.Location = new System.Drawing.Point(256, 98);
             this.dataGridViewData.MultiSelect = false;
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
@@ -124,64 +125,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewData.RowTemplate.Height = 28;
-            this.dataGridViewData.Size = new System.Drawing.Size(840, 509);
+            this.dataGridViewData.Size = new System.Drawing.Size(895, 527);
             this.dataGridViewData.TabIndex = 104;
             this.dataGridViewData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellContentClick);
             this.dataGridViewData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewData_CellPainting);
-            // 
-            // buttonSeleccionar
-            // 
-            this.buttonSeleccionar.HeaderText = "";
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.ReadOnly = true;
-            this.buttonSeleccionar.Width = 30;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Documento
-            // 
-            this.Documento.HeaderText = "Nro documento";
-            this.Documento.Name = "Documento";
-            this.Documento.ReadOnly = true;
-            this.Documento.Width = 167;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razon social";
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            this.RazonSocial.Width = 200;
-            // 
-            // Correo
-            // 
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            this.Correo.Width = 200;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
             // 
             // labelTitulo
             // 
@@ -194,16 +141,6 @@
             this.labelTitulo.TabIndex = 103;
             this.labelTitulo.Text = "Detalle del proveedor";
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label1.Location = new System.Drawing.Point(861, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 1);
-            this.label1.TabIndex = 109;
-            this.label1.Text = "label2";
-            // 
             // buttonLimpiarBuscardor
             // 
             this.buttonLimpiarBuscardor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -212,10 +149,12 @@
             this.buttonLimpiarBuscardor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLimpiarBuscardor.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonLimpiarBuscardor.Image = ((System.Drawing.Image)(resources.GetObject("buttonLimpiarBuscardor.Image")));
-            this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(1083, 50);
+            this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(807, 39);
             this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
-            this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(35, 30);
+            this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(75, 30);
             this.buttonLimpiarBuscardor.TabIndex = 94;
+            this.buttonLimpiarBuscardor.Text = "Limpiar";
+            this.buttonLimpiarBuscardor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLimpiarBuscardor.UseVisualStyleBackColor = false;
             this.buttonLimpiarBuscardor.Click += new System.EventHandler(this.buttonLimpiarBuscardor_Click);
             // 
@@ -227,22 +166,24 @@
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
-            this.buttonBuscar.Location = new System.Drawing.Point(1042, 50);
+            this.buttonBuscar.Location = new System.Drawing.Point(726, 39);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 30);
             this.buttonBuscar.TabIndex = 91;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // textBoxBusqueda
             // 
             this.textBoxBusqueda.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxBusqueda.Location = new System.Drawing.Point(861, 50);
+            this.textBoxBusqueda.Location = new System.Drawing.Point(545, 40);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
-            this.textBoxBusqueda.Size = new System.Drawing.Size(175, 20);
+            this.textBoxBusqueda.Size = new System.Drawing.Size(175, 27);
             this.textBoxBusqueda.TabIndex = 90;
             // 
             // comboBoxBusqueda
@@ -252,7 +193,7 @@
             this.comboBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBusqueda.FormattingEnabled = true;
             this.comboBoxBusqueda.ItemHeight = 19;
-            this.comboBoxBusqueda.Location = new System.Drawing.Point(681, 50);
+            this.comboBoxBusqueda.Location = new System.Drawing.Point(365, 40);
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(174, 27);
             this.comboBoxBusqueda.TabIndex = 108;
@@ -263,7 +204,7 @@
             this.labelBuscarPor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelBuscarPor.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscarPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelBuscarPor.Location = new System.Drawing.Point(606, 53);
+            this.labelBuscarPor.Location = new System.Drawing.Point(290, 42);
             this.labelBuscarPor.Name = "labelBuscarPor";
             this.labelBuscarPor.Size = new System.Drawing.Size(69, 19);
             this.labelBuscarPor.TabIndex = 107;
@@ -277,18 +218,6 @@
             this.textBoxID.TabIndex = 106;
             this.textBoxID.Text = "0";
             this.textBoxID.Visible = false;
-            // 
-            // labelTitulo2
-            // 
-            this.labelTitulo2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTitulo2.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.labelTitulo2.Location = new System.Drawing.Point(287, 17);
-            this.labelTitulo2.Name = "labelTitulo2";
-            this.labelTitulo2.Size = new System.Drawing.Size(840, 83);
-            this.labelTitulo2.TabIndex = 105;
-            this.labelTitulo2.Text = "Lista de proveedores";
-            this.labelTitulo2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelTelefono
             // 
@@ -486,14 +415,95 @@
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
             this.comboBoxEstado.TabIndex = 92;
             // 
-            // labelPanelIzquierda
+            // panelDetalleProveedor
             // 
-            this.labelPanelIzquierda.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPanelIzquierda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelPanelIzquierda.Location = new System.Drawing.Point(0, 0);
-            this.labelPanelIzquierda.Name = "labelPanelIzquierda";
-            this.labelPanelIzquierda.Size = new System.Drawing.Size(250, 637);
-            this.labelPanelIzquierda.TabIndex = 82;
+            this.panelDetalleProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelDetalleProveedor.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelDetalleProveedor.Location = new System.Drawing.Point(0, 0);
+            this.panelDetalleProveedor.Name = "panelDetalleProveedor";
+            this.panelDetalleProveedor.Size = new System.Drawing.Size(250, 637);
+            this.panelDetalleProveedor.TabIndex = 111;
+            // 
+            // panelListaProveedores
+            // 
+            this.panelListaProveedores.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelListaProveedores.Controls.Add(this.labelListaProveedores);
+            this.panelListaProveedores.Controls.Add(this.comboBoxBusqueda);
+            this.panelListaProveedores.Controls.Add(this.labelBuscarPor);
+            this.panelListaProveedores.Controls.Add(this.textBoxBusqueda);
+            this.panelListaProveedores.Controls.Add(this.buttonBuscar);
+            this.panelListaProveedores.Controls.Add(this.buttonLimpiarBuscardor);
+            this.panelListaProveedores.Location = new System.Drawing.Point(256, 12);
+            this.panelListaProveedores.Name = "panelListaProveedores";
+            this.panelListaProveedores.Size = new System.Drawing.Size(895, 80);
+            this.panelListaProveedores.TabIndex = 112;
+            // 
+            // labelListaProveedores
+            // 
+            this.labelListaProveedores.AutoSize = true;
+            this.labelListaProveedores.BackColor = System.Drawing.SystemColors.Window;
+            this.labelListaProveedores.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelListaProveedores.Location = new System.Drawing.Point(10, 10);
+            this.labelListaProveedores.Name = "labelListaProveedores";
+            this.labelListaProveedores.Size = new System.Drawing.Size(238, 39);
+            this.labelListaProveedores.TabIndex = 50;
+            this.labelListaProveedores.Text = "Lista de proveedores";
+            // 
+            // buttonSeleccionar
+            // 
+            this.buttonSeleccionar.HeaderText = "";
+            this.buttonSeleccionar.Name = "buttonSeleccionar";
+            this.buttonSeleccionar.ReadOnly = true;
+            this.buttonSeleccionar.Width = 30;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Documento
+            // 
+            this.Documento.HeaderText = "Nro documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            this.Documento.Width = 150;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.HeaderText = "Razon social";
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            this.RazonSocial.Width = 240;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 200;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 102;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 130;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
             // 
             // frmProveedores
             // 
@@ -501,17 +511,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1157, 637);
+            this.Controls.Add(this.panelListaProveedores);
             this.Controls.Add(this.textBoxIndice);
             this.Controls.Add(this.dataGridViewData);
             this.Controls.Add(this.labelTitulo);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonLimpiarBuscardor);
-            this.Controls.Add(this.buttonBuscar);
-            this.Controls.Add(this.textBoxBusqueda);
-            this.Controls.Add(this.comboBoxBusqueda);
-            this.Controls.Add(this.labelBuscarPor);
             this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.labelTitulo2);
             this.Controls.Add(this.labelTelefono);
             this.Controls.Add(this.textBoxTelefono);
             this.Controls.Add(this.labelLineTelefono);
@@ -529,7 +533,7 @@
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.labelEstado);
             this.Controls.Add(this.comboBoxEstado);
-            this.Controls.Add(this.labelPanelIzquierda);
+            this.Controls.Add(this.panelDetalleProveedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -537,6 +541,8 @@
             this.Text = "frmProveedores";
             this.Load += new System.EventHandler(this.frmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
+            this.panelListaProveedores.ResumeLayout(false);
+            this.panelListaProveedores.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,14 +553,12 @@
         private System.Windows.Forms.TextBox textBoxIndice;
         private System.Windows.Forms.DataGridView dataGridViewData;
         private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonLimpiarBuscardor;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.TextBox textBoxBusqueda;
         private System.Windows.Forms.ComboBox comboBoxBusqueda;
         private System.Windows.Forms.Label labelBuscarPor;
         private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.Label labelTitulo2;
         private System.Windows.Forms.Label labelTelefono;
         private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label labelLineTelefono;
@@ -572,7 +576,9 @@
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.Label labelEstado;
         private System.Windows.Forms.ComboBox comboBoxEstado;
-        private System.Windows.Forms.Label labelPanelIzquierda;
+        private System.Windows.Forms.Panel panelDetalleProveedor;
+        private System.Windows.Forms.Panel panelListaProveedores;
+        private System.Windows.Forms.Label labelListaProveedores;
         private System.Windows.Forms.DataGridViewButtonColumn buttonSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;

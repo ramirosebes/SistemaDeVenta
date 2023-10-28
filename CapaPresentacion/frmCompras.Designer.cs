@@ -105,7 +105,7 @@
             this.buttonRegistrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonRegistrar.Location = new System.Drawing.Point(688, 569);
             this.buttonRegistrar.Name = "buttonRegistrar";
-            this.buttonRegistrar.Size = new System.Drawing.Size(140, 30);
+            this.buttonRegistrar.Size = new System.Drawing.Size(129, 30);
             this.buttonRegistrar.TabIndex = 14;
             this.buttonRegistrar.Text = "Registrar";
             this.buttonRegistrar.UseVisualStyleBackColor = false;
@@ -117,7 +117,7 @@
             this.textBoxTotalAPagar.Location = new System.Drawing.Point(688, 536);
             this.textBoxTotalAPagar.Name = "textBoxTotalAPagar";
             this.textBoxTotalAPagar.ReadOnly = true;
-            this.textBoxTotalAPagar.Size = new System.Drawing.Size(140, 27);
+            this.textBoxTotalAPagar.Size = new System.Drawing.Size(129, 27);
             this.textBoxTotalAPagar.TabIndex = 13;
             this.textBoxTotalAPagar.Text = "0";
             // 

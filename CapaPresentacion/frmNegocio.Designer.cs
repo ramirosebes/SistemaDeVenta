@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNegocio));
             this.labelTitulo = new System.Windows.Forms.Label();
-            this.labelPanelIzquierda = new System.Windows.Forms.Label();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.buttonGuardarCambios = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.buttonSubir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.panelDetalleNegocio = new System.Windows.Forms.Panel();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -60,15 +60,6 @@
             this.labelTitulo.Size = new System.Drawing.Size(185, 33);
             this.labelTitulo.TabIndex = 35;
             this.labelTitulo.Text = "Detalle del negocio";
-            // 
-            // labelPanelIzquierda
-            // 
-            this.labelPanelIzquierda.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPanelIzquierda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelPanelIzquierda.Location = new System.Drawing.Point(0, 0);
-            this.labelPanelIzquierda.Name = "labelPanelIzquierda";
-            this.labelPanelIzquierda.Size = new System.Drawing.Size(545, 637);
-            this.labelPanelIzquierda.TabIndex = 34;
             // 
             // printPreviewDialog1
             // 
@@ -246,6 +237,15 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // panelDetalleNegocio
+            // 
+            this.panelDetalleNegocio.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelDetalleNegocio.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelDetalleNegocio.Location = new System.Drawing.Point(0, 0);
+            this.panelDetalleNegocio.Name = "panelDetalleNegocio";
+            this.panelDetalleNegocio.Size = new System.Drawing.Size(545, 637);
+            this.panelDetalleNegocio.TabIndex = 37;
+            // 
             // frmNegocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,7 +254,7 @@
             this.ClientSize = new System.Drawing.Size(1157, 637);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.labelTitulo);
-            this.Controls.Add(this.labelPanelIzquierda);
+            this.Controls.Add(this.panelDetalleNegocio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -272,7 +272,6 @@
         #endregion
 
         private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.Label labelPanelIzquierda;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
@@ -288,5 +287,6 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label labelLineNombre;
         private System.Windows.Forms.Button buttonGuardarCambios;
+        private System.Windows.Forms.Panel panelDetalleNegocio;
     }
 }

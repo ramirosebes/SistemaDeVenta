@@ -265,7 +265,7 @@
             this.MaximizeBox = false;
             this.Name = "mdProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdProducto";
+            this.Text = "Lista de productos";
             this.Load += new System.EventHandler(this.mdProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

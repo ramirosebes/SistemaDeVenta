@@ -16,5 +16,10 @@ namespace CapaPresentacion.Modales
         {
             InitializeComponent();
         }
+
+        private void buttonIngresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
