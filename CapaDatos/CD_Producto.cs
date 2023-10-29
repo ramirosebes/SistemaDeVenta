@@ -17,7 +17,8 @@ namespace CapaDatos
         {
             List<Producto> lista = new List<Producto>();
 
-            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            //using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            using (SqlConnection oconexion = CD_SingletonConexion.ObtenerConexion())
             {
                 try
                 {
@@ -27,7 +28,7 @@ namespace CapaDatos
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.CommandType = CommandType.Text;
 
-                    oconexion.Open();
+                    //oconexion.Open(); //Comentar si es con Singleton
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         while (dr.Read())
