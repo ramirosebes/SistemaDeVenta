@@ -164,11 +164,11 @@
             // 
             this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelTitulo.Location = new System.Drawing.Point(36, 24);
+            this.labelTitulo.Location = new System.Drawing.Point(36, 25);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(228, 45);
             this.labelTitulo.TabIndex = 12;
-            this.labelTitulo.Text = "Sistema de Venta";
+            this.labelTitulo.Text = "Servicio De Color";
             // 
             // label1
             // 

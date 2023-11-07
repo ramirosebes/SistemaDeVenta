@@ -23,15 +23,15 @@ namespace CapaDatos
             }
 
             //Puede omitirse esta parte si se abre desde el controlador
-            if (conexion.State != System.Data.ConnectionState.Open)
-            {
-                conexion.Open();
-            }
-            else
-            {
-                //No hace falta esta parte
-                conexion.Close();
-            }
+            //if (conexion.State != System.Data.ConnectionState.Open)
+            //{
+            //    conexion.Open();
+            //}
+            //else
+            //{
+            //    //No hace falta esta parte
+            //    conexion.Close();
+            //}
 
             return conexion;
         }

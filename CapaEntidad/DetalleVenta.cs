@@ -8,6 +8,13 @@ namespace CapaEntidad
 {
     public class DetalleVenta
     {
+        private int idDetalleVenta;
+        private Producto objetoProducto;
+        private decimal precioVenta;
+        private int cantidad;
+        private decimal subTotal;
+        private string fechaRegistro;
+
         public int IdDetalleVenta { get; set; }
         public Producto oProducto { get; set; }
         public decimal PrecioVenta { get; set; }

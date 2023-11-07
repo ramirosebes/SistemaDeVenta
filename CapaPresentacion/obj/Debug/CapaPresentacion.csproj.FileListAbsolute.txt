@@ -72,7 +72,6 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPres
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmDetalleVenta.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmProducto.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedores.resources
-D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmReportes.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuarios.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmVentas.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
@@ -114,3 +113,4 @@ D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPres
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteCompras.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteVentas.resources
 D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdAcercaDe.resources
+D:\PersonalFolder\PersonalDesktop\Programacion\Facultad\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmGrupos.resources

@@ -8,6 +8,14 @@ namespace CapaEntidad
 {
     public class Proveedor
     {
+        private int idProveedor;
+        private string documento;
+        private string razonSocial;
+        private string correo;
+        private string telefono;
+        private bool estado;
+        private string fechaRegistro;
+
         public int IdProveedor { get; set; }
         public string Documento { get; set; }
         public string RazonSocial { get; set; }

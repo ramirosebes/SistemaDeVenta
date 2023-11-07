@@ -28,7 +28,7 @@ namespace CapaDatos
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.CommandType = CommandType.Text;
 
-                    //oconexion.Open(); //Comentar si es con Singleton
+                    oconexion.Open(); //Comentar si se valida la conexion en el Singleton
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         while (dr.Read())

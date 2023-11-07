@@ -36,20 +36,21 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            List<Permiso> listaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
+            //Mostrar o no Modulos por permisos
+            //List<Permiso> listaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
 
-            foreach (ToolStripMenuItem menu in menu.Items)
-            {
-                //"m" es cada elemento que tiene la lista que trea de SQL.
-                //m.nombreMenu trae los nombres de la base de datos y en menu.Name estan los nombres que yo coloco en el form Inicio como nombre de los MenuItem en la propiedad (name)
-                //Y compara que sean iguales
-                bool encontrado = listaPermisos.Any(m => m.NombreMenu == menu.Name);
+            //foreach (ToolStripMenuItem menu in menu.Items)
+            //{
+            //    //"m" es cada elemento que tiene la lista que trea de SQL.
+            //    //m.nombreMenu trae los nombres de la base de datos y en menu.Name estan los nombres que yo coloco en el form Inicio como nombre de los MenuItem en la propiedad (name)
+            //    //Y compara que sean iguales
+            //    bool encontrado = listaPermisos.Any(m => m.NombreMenu == menu.Name);
 
-                if (encontrado == false)
-                {
-                    menu.Visible = false;
-                }
-            }
+            //    if (encontrado == false)
+            //    {
+            //        menu.Visible = false;
+            //    }
+            //}
 
             labelUsuario.Text = usuarioActual.NombreCompleto;
         }
@@ -78,20 +79,15 @@ namespace CapaPresentacion
             formulario.Show();
         }
 
-        private void menuUsuario_Click(object sender, EventArgs e)
+        private void subMenuUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormulario((ToolStripMenuItem) sender ,new frmUsuarios());
-            //abrirFormulario(menuUsuarios, new frmCategoria()); //Es lo mismo que arriba pero de otra forma
+            //abrirFormulario((ToolStripMenuItem) sender ,new frmUsuarios());
+            abrirFormulario(menuSeguridad, new frmUsuarios());
         }
 
-        private void subMenuCategoria_Click(object sender, EventArgs e)
+        private void subMenuGrupos_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuMantenedor, new frmCategoria());
-        }
-
-        private void subMenuProducto_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(menuMantenedor, new frmProducto());
+            abrirFormulario(menuSeguridad, new frmGrupos());
         }
 
         private void subMenuRegistrarVenta_Click(object sender, EventArgs e)
@@ -104,6 +100,11 @@ namespace CapaPresentacion
             abrirFormulario(menuVentas, new frmDetalleVenta());
         }
 
+        private void subMenuClientes_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuVentas, new frmClientes());
+        }
+
         private void subMenuRegistrarCompra_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuCompras, new frmCompras(usuarioActual));
@@ -114,24 +115,19 @@ namespace CapaPresentacion
             abrirFormulario(menuCompras, new frmDetalleCompra());
         }
 
-        private void menuClientes_Click(object sender, EventArgs e)
+        private void subMenuCategorias_Click(object sender, EventArgs e)
         {
-            abrirFormulario((ToolStripMenuItem)sender, new frmClientes());
+            abrirFormulario(menuCompras, new frmCategoria());
         }
 
-        private void menuProveedores_Click(object sender, EventArgs e)
+        private void subMenuProductos_Click(object sender, EventArgs e)
         {
-            abrirFormulario((ToolStripMenuItem)sender, new frmProveedores());
+            abrirFormulario(menuCompras, new frmProducto());
         }
 
-        //private void menuReportes_Click(object sender, EventArgs e)
-        //{
-        //    abrirFormulario((ToolStripMenuItem)sender, new frmReportes());
-        //}
-
-        private void subMenuNegocio_Click(object sender, EventArgs e)
+        private void subMenuProveedores_Click(object sender, EventArgs e)
         {
-            abrirFormulario((ToolStripMenuItem)sender, new frmNegocio());
+            abrirFormulario(menuCompras, new frmProveedores());
         }
 
         private void subMenuReporteCompras_Click(object sender, EventArgs e)
@@ -144,7 +140,12 @@ namespace CapaPresentacion
             abrirFormulario(menuReportes, new frmReporteVentas());
         }
 
-        private void menuAcercaDe_Click(object sender, EventArgs e)
+        private void datosDelNegocioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuConfiguracion, new frmNegocio());
+        }
+
+        private void acerdaDeServicioDeColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             mdAcercaDe md = new mdAcercaDe();
             md.ShowDialog();
